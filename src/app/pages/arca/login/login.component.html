@@ -1,0 +1,47 @@
+<div class="w-100 d-flex flex-column">
+    <div>
+        <img src="assets/arca/login/nav.png" class="desktop img-fluid w-100" />
+        <img src="assets/arca/login/nav-m.png" class="mobile img-fluid w-100" />
+    </div>
+    <div id="banner" class="d-flex align-items-center justify-content-center">
+
+        <div id="login-container" class="h-100 py-5">
+            <div class="d-flex flex-column align-items-center justify-content-center h-100 w-100 px-4 text-center">
+                <div id="login-form" class="py-5 px-4">
+                    <div class="h3 mb-3">
+                        <span>Ingresar con Clave Fiscal</span>
+                    </div>
+
+                    @if(!pass){
+                        <div>
+                            <p class="h6 text-start">CUIT/CUIL</p>
+                            <input class="w-100 mb-5" type="text">
+                            <button class="btn btn-primary w-100 mb-3" (click)="pass=true">Iniciar sesión</button>
+                        </div>
+                    }
+                    @else{
+                        <div>
+                            <p class="h6 text-start">TU CLAVE</p>
+                            <input class="w-100 mb-5" type="text">
+                            <button class="btn btn-primary w-100 mb-3" [routerLink]="['/arca/servicios']">Ingresar</button>
+                        </div>
+                    }
+                    
+                    <div class="mb-3">
+                        <a class="h5" href="#" style="text-decoration: none">¿Olvidaste tu clave?</a>
+                    </div>
+
+                    <hr class="w-100 mb-3">
+                    
+                    <button class="btn btn-outline-primary w-100 mb-3">Obtené tu Clave Fiscal</button>
+                    <p>¿Qué es la Clave Fiscal?</p>
+                    <p>Ayuda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <img src="assets/arca/login/footer.png" class="desktop img-fluid w-100" />
+        <img src="assets/arca/login/footer-m.png" class="mobile img-fluid w-100" />
+    </div>
+</div>

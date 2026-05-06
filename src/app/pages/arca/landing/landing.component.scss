@@ -1,0 +1,23 @@
+.mobile {
+    display: none;
+}
+#login-container {
+    width: 50%;
+    position:absolute;
+    top:0;
+    right:0;
+}
+@media (max-width: 950px) {
+    #login-container {
+        width: 100%;
+        position: inherit;
+        background: #242c4f;
+        padding: 30px 20px;
+    }
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}
