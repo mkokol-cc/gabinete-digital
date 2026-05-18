@@ -1,0 +1,70 @@
+@if(step==0){
+    <div class="d-flex justify-content-center">
+        <div class="text-center w-50 my-4">
+            <p class="m-0"><b>Seleccione la Empresa a representar:</b></p>
+            <button class="w-100" (click)="step=1">OGGERO MATIAS NORBERTO</button>
+        </div>
+    </div>
+}
+@if(step==1){
+    <div class="text-center">
+        <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+            <p class="text-light fw-bold">RCEL - RÉGIMEN DE COMPROBANTES EN LÍNEA</p>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="w-50 mb-5 mt-3">
+                <button (click)="step=2" class="w-100 text-start"><i class="mx-2 text-danger bi bi-file-earmark"></i>Generar Comprobantes<i class="mx-2 text-danger bi bi-caret-right-fill" style="float: inline-end"></i></button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-search"></i>Consultas<i class="mx-2 text-danger bi bi-caret-right-fill" style="float: inline-end"></i></button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-postcard"></i>Datos Adicionales del Comprobante<i class="mx-2 text-danger bi bi-caret-right-fill" style="float: inline-end"></i></button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-wallet"></i>ABM Puntos de Ventas</button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-wallet"></i>Lechería - Liquidación Electrónica</button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-wallet"></i>Tabaco - Liquidación Electrónica</button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-wallet"></i>Hacienda y Carne - Liquidación Electrónica</button>
+                <button (click)="step=2" class="w-100 text-start" disabled><i class="mx-2 text-danger bi bi-wallet"></i>Azúcar - Liquidación Electrónica</button>
+            </div>
+        </div>
+    </div>
+}
+@if(step==2){
+    <div class="text-center">
+        <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+            <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES</p>
+        </div>
+        <div class="gradient fw-bold text-color-custom text-size-12">
+            Puntos de Ventas y Tipos de Comprobantes habilitados para impresión
+        </div>
+        <div class="d-flex justify-content-center my-2">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="gradient mb-3">
+            <div class="d-flex justify-content-center my-2">
+                <span class="text-size-12 pe-2"><b>Punto de Ventas a Utilizar</b></span>
+                <select class="text-size-12" name="" id="">
+                    <option value="" selected disabled hidden>Seleccionar...</option>
+                    <option value="2">00001-San Lorenzo 125 - Las Varillas, Cordoba</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center my-2">
+                <span class="text-size-12 pe-2"><b>Tipo de Comprobante</b></span>
+                <select class="text-size-12" name="" id="">
+                    <option value="" selected disabled hidden>Seleccionar...</option>
+                    <option value="2">Factura C</option>
+                    <option value="3" disabled>Nota de Débito C</option>
+                    <option value="4" disabled>Nota de Crédito C</option>
+                    <option value="5" disabled>Recibo C</option>
+                    <option value="120" disabled>Factura de Crédito Electrónica MiPyMEs (FCE) C</option>
+                    <option value="121" disabled>Nota de Débito Electrónica MiPyMEs (FCE) C</option>
+                    <option value="122" disabled>Nota de Crédito Electrónica MiPyMEs (FCE) C</option>
+                </select>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center pb-3">
+            <button (click)="step=1">< Volver</button>
+            <button>Continuar ></button>
+        </div>
+    </div>
+}

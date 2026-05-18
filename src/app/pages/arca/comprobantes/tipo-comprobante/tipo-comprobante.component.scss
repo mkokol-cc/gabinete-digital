@@ -1,0 +1,48 @@
+button{
+    border-radius: 6px;
+    border: 1px solid #d8dcdf;
+    background: #eeeeee;
+    font-weight: bold;
+    color: #004276;
+}
+
+button, p, .text-size-12{
+    font-size: 12px;
+}
+
+
+.text-color-custom{
+    color: #048;
+}
+.circle{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+.gradient{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    position: relative;
+    background: linear-gradient(
+        to right,
+        white 0%,
+        #66a0e4 50%,  /* tu color */
+        white 100%
+    );
+}
+.gradient::before,
+.gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* grosor del borde */
+  background: linear-gradient(to right, white, #004488, white);
+}
+.gradient::before {
+  top: 0;
+}
+.gradient::after {
+  bottom: 0;
+}

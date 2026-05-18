@@ -1,0 +1,57 @@
+#header{
+    border-radius: 0px 0px 12px 12px;
+    padding: 10px;
+}
+p.header-data{
+    font-size: 12px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 2rem;
+}
+.cont{
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 5px 20px #555;
+}
+#background{
+    background:#999999;
+}
+.text-color-custom{
+    color: #048;
+}
+.circle{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+.gradient{
+    padding-bottom: 2px;
+    padding-top: 2px;
+    position: relative;
+    background: linear-gradient(
+        to right,
+        white 0%,
+        #66a0e4 50%,  /* tu color */
+        white 100%
+    );
+}
+.gradient::before,
+.gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px; /* grosor del borde */
+  background: linear-gradient(to right, white, #004488, white);
+}
+.gradient::before {
+  top: 0;
+}
+.gradient::after {
+  bottom: 0;
+}

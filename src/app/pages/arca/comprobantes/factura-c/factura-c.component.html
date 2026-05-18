@@ -1,0 +1,356 @@
+<div id="step-4" class="text-center d-none">
+    <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+        <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
+    </div>
+    <div class="gradient mb-4 fw-bold text-color-custom">
+        DATOS DE EMISIÓN (PASO 1 DE 4)
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="gradient">
+        <div class="d-flex">
+            <span>Fecha del Comprobante</span>
+            <input type="date" name="" id="">
+        </div>
+        <div class="d-flex">
+            <span>Conceptos a incluír</span>
+            <select name="" id="">
+                <option value="" selected="selected" style="color:#888;" onclick="mostrarOcultar(this.value);">seleccionar...</option>
+				<option value="1">&nbsp;Productos</option>
+				<option value="2">&nbsp;Servicios</option>
+				<option value="3">&nbsp;Productos y Servicios</option>
+            </select>
+        </div>
+        <div class="d-flex">
+            <input type="checkbox" name="monedaextranjera" id="monedaextranjera">
+            <label for="monedaextranjera">Moneda Extranjera</label>
+        </div>
+        <div>
+            <span>Período Facturado</span>
+            <hr>
+            <table>
+                <tr>
+                    <td>Desde</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Hasta</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>Vto. para el Pago</td>
+                    <td><input type="date"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <span>Actividades Asociadas (Obligatorio según régimen específico (vgr. Remito Electrónico Cárnico, etc.)</span>
+            <hr>
+            <table>
+                <tr>
+                    <th>Nro.</th>
+                    <th>Actividad</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><select name="" id=""></select></td>
+                </tr>
+            </table>
+            <div class="d-flex justiry-content-center">
+                <button>-</button>
+                <button>+</button>
+            </div>
+        </div>
+        <div>
+            <span>Referencia Comercial (opcional)</span>
+            <hr>
+            <table>
+                <tr>
+                    <td>Referencia #</td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <div class="d-flex justiry-content-center">
+                <button>-</button>
+                <button>+</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button>< Volver</button>
+        <button>Continuar ></button>
+    </div>
+</div>
+<div id="step-5" class="text-center d-none">
+    <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+        <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
+    </div>
+    <div class="gradient mb-4 fw-bold text-color-custom">
+        DATOS DE EMISIÓN (PASO 2 DE 4)
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="gradient">
+        <div class="d-flex">
+            <span>Condición frente al IVA</span>
+            <select name="" id=""></select>
+        </div>
+        <div class="d-flex">
+            <span>Tipo y Nro. de Documento</span>
+            <select name="" id="">
+                <option value="" selected="selected" style="color:#888;" onclick="mostrarOcultar(this.value);">seleccionar...</option>
+				<option value="1">&nbsp;Productos</option>
+				<option value="2">&nbsp;Servicios</option>
+				<option value="3">&nbsp;Productos y Servicios</option>
+            </select>
+            <input type="text">
+        </div>
+        <div class="d-flex">
+            <span>A. y Nombre o Razón Social</span>
+            <select name="" id=""></select>
+        </div>
+        <div class="d-flex">
+            <span>Domicilio Comercial</span>
+            <select name="" id=""></select>
+        </div>
+        <div class="d-flex">
+            <span>Email</span>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <span>Condiciones de Venta</span>
+            <hr>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Contado</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Tarjeta de Débito</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Tarjeta de Crédito</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Cuenta Corriente</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Cheque</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Transferencia Bancaria</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Otra</label>
+            </div>
+            <div>
+                <input type="checkbox" name="contado" id="contado">
+                <label for="contado">Otros medios de pago electrónico</label>
+            </div>
+        </div>
+        <div>
+            <span>Comprobantes Asociados</span>
+            <hr>
+            <table>
+                <tr>
+                    <th>Tipo de Comprobante</th>
+                    <th>Pto. Vta.</th>
+                    <th>Comprobante</th>
+                    <th>Fecha Emisión (Opc.)</th>
+                </tr>
+                <tr>
+                    <td><select name="" id=""></select></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="date"></td>
+                </tr>
+            </table>
+            <div class="d-flex justiry-content-center">
+                <button>-</button>
+                <button>+</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button>< Volver</button>
+        <button>Continuar ></button>
+    </div>
+</div>
+<div id="step-6" class="text-center d-none">
+    <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+        <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
+    </div>
+    <div class="gradient mb-4 fw-bold text-color-custom">
+                    DATOS DE EMISIÓN (PASO 3 DE 4)
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="gradient">
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Producto/Servicio</th>
+                <th>Cant.</th>
+                <th>U. Medida</th>
+                <th>Prec. Unitario</th>
+                <th>% Bon.</th>
+                <th>Importe Bon.</th>
+                <th>Subtotal</th>
+                <th>Eliminar</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="" id=""></td>
+                <td><textarea name="" id=""></textarea></td>
+                <td><input type="text" name="" id=""></td>
+                <td><select name="" id=""></select></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><button>X</button></td>
+            </tr>
+        </table>
+        <button>Agregar linea descripcion</button>
+    </div>
+    <div class="gradient">
+        <table>
+            <tr>
+                <th></th>
+                <th>Detalle</th>
+                <th>Base Imponible</th>
+                <th>Alícuota %</th>
+                <th>Importe</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td><select name="" id=""></select></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><button>X</button></td>
+            </tr>
+            <tr>
+                <td>Importe Otros Tributos:	</td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+        </table>
+        <div>
+            <div class="d-flex"><span>Subtotal:</span><input type="text" name="" id=""></div>
+            <div class="d-flex"><span>Importe Otros Tributos:</span><input type="text" name="" id=""></div>
+            <div class="d-flex"><span>Importe Total:</span><input type="text" name="" id=""></div>
+        </div>
+        <button>Agregar otro Tributo</button>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button>< Volver</button>
+        <button>Continuar ></button>
+    </div>
+</div>
+<div id="step-7" class="text-center">
+    <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
+        <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
+    </div>
+    <div class="gradient mb-4 fw-bold text-color-custom">
+        DATOS DE EMISIÓN (PASO 4 DE 4)
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div>
+        El siguiente es un resumen de todos los datos ingresados.
+        De confirmar los mismos se procederá a la generación del comprobante.
+    </div>
+    <div>
+        Datos del Emisor
+        <hr>
+        <b>Logo Preimpreso</b>	No
+        <b>Mostrar Nombre de Fantasía</b>	No
+        <b>Razón Social</b>	OGGERO MATIAS NORBERTO
+        <b>Punto de Venta</b>	00001
+        <b>Domicilio</b>	San Lorenzo 125 - Las Varillas, Córdoba
+        <b>Conceptos a Incluír</b>	Servicios
+        <b>Período Facturado</b>	<b>desde:</b> 11/05/2026    <b>hasta:</b> 11/05/2026
+        <b>Vto. para el Pago</b>	11/05/2026
+    </div>
+    <div>
+        Datos del Receptor
+        <hr>
+        <b>CUIT</b>	30546671166
+        <b>Razón Social</b>	OGGERO MATIAS NORBERTO
+        <b>Domicilio Comercial</b>	San Lorenzo 125 - Las Varillas, Córdoba
+        <b>Email</b>
+        <b>Condición frente al IVA</b>	IVA Responsable Inscripto
+        <b>Condiciones de Venta	</b>	null
+        <b>Comprobantes Asociados</b>	-
+    </div>
+    <div>
+        Detalle de la Operación
+        <hr>
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Producto/Servicio</th>
+                <th>Cant.</th>
+                <th>U. Medida</th>
+                <th>Prec. Unitario</th>
+                <th>% Bon.</th>
+                <th>Importe Bon.</th>
+                <th>Subtotal</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        Otros Tributos:
+        <table>
+            <tr>
+                <th>Detalle</th>
+                <th>Base Imponible</th>
+                <th>Alícuota %</th>
+                <th>Importe</th>
+            </tr>
+        </table>
+        <table>
+            <tr>Subtotal:</tr><tr> $	75.000,00</tr>
+            <tr>Importe Otros Tributos:</tr><tr>$	0,00</tr>
+            <tr>Importe Total:</tr><tr> $75.000,00</tr>
+        </table>
+    </div>
+    <hr>
+    <div class="d-flex justify-content-center">
+        <button>< Volver</button>
+        <button>Confirmar Datos...</button>
+    </div>
+</div>
