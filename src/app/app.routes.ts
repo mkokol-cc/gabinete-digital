@@ -7,12 +7,11 @@ import { ComprobantesComponent } from './pages/arca/comprobantes/comprobantes.co
 import { FormulariosComponent } from './forms/formularios/formularios.component';
 
 export const routes: Routes = [
-    {path: '', component: LandingComponentArca},
+    {path: '', component: FormulariosComponent},
     {path: 'arca', component: LandingComponentArca},
     {path: 'arca/login', component: LoginComponent},
     {path: 'arca/servicios', component: ServiciosComponent},
     {path: 'arca/servicios/comprobantes', component: ComprobantesComponent},
 
     {path: 'ecogas', component: LandingComponentEcogas},
-    {path: 'formularios', component: FormulariosComponent},
 ];
