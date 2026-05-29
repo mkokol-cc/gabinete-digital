@@ -16,6 +16,7 @@ export class FormulariosComponent implements OnInit {
   // States for conditional visibility
   muniPropCond: string = 'propio';
   gasCond: string = 'propio';
+  emavPropCond: string = 'propio';
 
   // Repeaters
   vehiculos: any[] = [{ marca: '', modelo: '', patente: '', valor: 0 }];
