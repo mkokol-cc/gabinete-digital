@@ -24,7 +24,7 @@ import { MisDatosComponent } from './pages/admin/admin-alumno/mis-datos/mis-dato
 
 export const routes: Routes = [
     //{path: '', component: FormulariosComponent},
-    {path: '', component: DashboardComponent},
+    //{path: '', component: DashboardComponent},
     {path: 'arca', component: LandingComponentArca},
     {path: 'arca/login', component: LoginComponent},
     {path: 'arca/servicios', component: ServiciosComponent},
@@ -42,7 +42,8 @@ export const routes: Routes = [
     {path: 'inmobiliaria', component: LandingComponentInmobiliaria},
     {path: 'proveedor', component: LandingComponentProveedor},
     {path: 'emav', component: LandingComponentEmav},
-    {path: 'admin-alumno', component: AdminAlumnoComponent, children: [
+    
+    {path: '', component: AdminAlumnoComponent, children: [
         {path: '', redirectTo: 'plataformas', pathMatch: 'full'},
         {path: 'plataformas', component: PlataformasComponent},
         {path: 'correo', component: CorreoComponent},
