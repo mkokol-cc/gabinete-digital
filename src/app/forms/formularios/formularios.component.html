@@ -1,466 +1,466 @@
 <div class="main-container">
-      <!-- PLATAFORMA ARCA -->
-      <section class="platform">
-        <h1>PLATAFORMA ARCA</h1>
-        <form class="form-card">
-          <h2>Formulario: Inscripción Empresa</h2>
+  <!-- PLATAFORMA ARCA -->
+  <section class="platform">
+    <h1>PLATAFORMA ARCA</h1>
+    <form class="form-card">
+      <h2>Formulario: Inscripción Empresa</h2>
           
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Usuario</label><input type="text" name="arca_user"></div>
-          <div class="form-group"><label>Clave</label><input type="password" name="arca_pass"></div>
-          <div class="form-group"><label>Repetir Clave</label><input type="password" name="arca_pass2"></div>
+      <div class="form-group"><label>Usuario</label><input type="text" name="arca_user"></div>
+      <div class="form-group"><label>Clave</label><input type="password" name="arca_pass"></div>
+      <div class="form-group"><label>Repetir Clave</label><input type="password" name="arca_pass2"></div>
           
-          <h3>Datos de la empresa</h3>
-          <div class="form-group"><label>Nombre Empresa</label><input type="text" name="arca_name"></div>
-          <div class="form-group">
-            <label>Actividad Principal</label>
-            <select name="arca_act">
-              <option>Venta minorista</option>
-              <option>Servicios informáticos</option>
-              <option>Construcción</option>
-              <option>Servicios Profesionales</option>
-            </select>
-          </div>
-          <div class="form-group"><label>Domicilio</label><input type="text" name="arca_dom"></div>
-          <div class="form-group"><label>CUIT Generado (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <h3>Datos de la empresa</h3>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text" name="arca_name"></div>
+      <div class="form-group">
+        <label>Actividad Principal</label>
+        <select name="arca_act">
+          <option>Venta minorista</option>
+          <option>Servicios informáticos</option>
+          <option>Construcción</option>
+          <option>Servicios Profesionales</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Domicilio</label><input type="text" name="arca_dom"></div>
+      <div class="form-group"><label>CUIT Generado (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
           
-          <h3>Impuestos</h3>
-          <div class="checkbox-group">
-            <label><input type="checkbox"> IVA</label>
-            <label><input type="checkbox"> Monotributo</label>
-            <label><input type="checkbox"> Autónomos</label>
-            <label><input type="checkbox"> Ganancias</label>
-          </div>
+      <h3>Impuestos</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> IVA</label>
+        <label><input type="checkbox"> Monotributo</label>
+        <label><input type="checkbox"> Autónomos</label>
+        <label><input type="checkbox"> Ganancias</label>
+      </div>
           
-          <div class="form-group mt-3"><label><input type="checkbox"> Acepta Términos y Condiciones</label></div>
-          <div class="form-group"><label>Firma Digital (Representación)</label><div class="signature-pad">Área de firma</div></div>
-          <div class="form-group"><label>Fecha</label><input type="date"></div>
-          <button type="submit">Enviar Inscripción</button>
-        </form>
-      </section>
+      <div class="form-group mt-3"><label><input type="checkbox"> Acepta Términos y Condiciones</label></div>
+      <div class="form-group"><label>Firma Digital (Representación)</label><div class="signature-pad">Área de firma</div></div>
+      <div class="form-group"><label>Fecha</label><input type="date"></div>
+      <button type="submit">Enviar Inscripción</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA MUNICIPALIDAD -->
-      <section class="platform">
-        <h1>PLATAFORMA MUNICIPALIDAD</h1>
+  <!-- PLATAFORMA MUNICIPALIDAD -->
+  <section class="platform">
+    <h1>PLATAFORMA MUNICIPALIDAD</h1>
         
-        <!-- Form 1: Alta Tasa -->
-        <form class="form-card">
-          <h2>Formulario: Alta Tasa General de Inmuebles</h2>
+    <!-- Form 1: Alta Tasa -->
+    <form class="form-card">
+      <h2>Formulario: Alta Tasa General de Inmuebles</h2>
 
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <h3>Datos del titular</h3>
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <h3>Datos del titular</h3>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
           
-          <h3>Información del inmueble</h3>
-          <div class="form-group"><label>Dirección</label><input type="text"></div>
-          <div class="form-group"><label>Barrio</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
-          <div class="form-group"><label>Identificación Inmueble</label><input type="text"></div>
-          <div class="form-group"><label>Nombre del propietario</label><input type="text"></div>
-          <div class="form-group"><label>Nro Cuenta Municipal (Auto)</label><input type="text" value="MUN-77221-X" readonly class="readonly"></div>
+      <h3>Información del inmueble</h3>
+      <div class="form-group"><label>Dirección</label><input type="text"></div>
+      <div class="form-group"><label>Barrio</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <div class="form-group"><label>Identificación Inmueble</label><input type="text"></div>
+      <div class="form-group"><label>Nombre del propietario</label><input type="text"></div>
+      <div class="form-group"><label>Nro Cuenta Municipal (Auto)</label><input type="text" value="MUN-77221-X" readonly class="readonly"></div>
           
-          <div class="form-group">
-            <label>Tipo de Inmueble</label>
-            <select><option>Local Comercial</option><option>Depósito</option><option>Oficina</option></select>
-          </div>
-          <div class="form-group">
-            <label>Uso del Inmueble</label>
-            <select><option>Comercial</option><option>Industrial</option><option>Mixto</option></select>
-          </div>
+      <div class="form-group">
+        <label>Tipo de Inmueble</label>
+        <select><option>Local Comercial</option><option>Depósito</option><option>Oficina</option></select>
+      </div>
+      <div class="form-group">
+        <label>Uso del Inmueble</label>
+        <select><option>Comercial</option><option>Industrial</option><option>Mixto</option></select>
+      </div>
           
-          <div class="form-group">
-            <label>Condición</label>
-            <label><input type="radio" name="cond" [(ngModel)]="muniPropCond" value="propio"> Propio</label>
-            <label><input type="radio" name="cond" [(ngModel)]="muniPropCond" value="alquilado"> Alquilado</label>
-          </div>
-          <div class="form-group" *ngIf="muniPropCond === 'alquilado'">
-            <label>Nombre Propietario</label><input type="text">
-          </div>
+      <div class="form-group">
+        <label>Condición</label>
+        <label><input type="radio" name="cond" [(ngModel)]="muniPropCond" value="propio"> Propio</label>
+        <label><input type="radio" name="cond" [(ngModel)]="muniPropCond" value="alquilado"> Alquilado</label>
+      </div>
+      <div class="form-group" *ngIf="muniPropCond === 'alquilado'">
+        <label>Nombre Propietario</label><input type="text">
+      </div>
           
-          <div class="form-group"><label>Declaración</label><textarea></textarea></div>
-          <div class="form-group">
-            <label>
-              <input type="checkbox">
+      <div class="form-group"><label>Declaración</label><textarea></textarea></div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox">
               Los datos revisten carácter de Declaración Jurada
-            </label>
-          </div>
-          <div class="form-group"><label>Firma</label><input type="text" placeholder="Firma digital"></div>
-          <div class="form-group"><label>Fecha</label><input type="date"></div>
-          <button type="submit">Enviar Alta Tasa</button>
-        </form>
+        </label>
+      </div>
+      <div class="form-group"><label>Firma</label><input type="text" placeholder="Firma digital"></div>
+      <div class="form-group"><label>Fecha</label><input type="date"></div>
+      <button type="submit">Enviar Alta Tasa</button>
+    </form>
 
-        <!-- Form 2: Alta Patente -->
-        <form class="form-card mt-4">
-          <h2>Formulario: Alta Patente Municipal</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+    <!-- Form 2: Alta Patente -->
+    <form class="form-card mt-4">
+      <h2>Formulario: Alta Patente Municipal</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <h3>Datos del vehículo</h3>
-          <div class="form-group"><label>Marca</label><input type="text"></div>
-          <div class="form-group"><label>Modelo</label><input type="text"></div>
-          <div class="form-group"><label>Año</label><input type="number"></div>
-          <div class="form-group"><label>Dominio / Patente</label><input type="text"></div>
-          <div class="form-group"><label>Nro Registro Municipal (Auto)</label><input type="text" value="REG-99221" readonly class="readonly"></div>
-          <div class="form-group"><label>Declaración</label><textarea></textarea></div>
-          <div class="form-group"><label>Fecha</label><input type="date"></div>
-          <button type="submit">Enviar Alta Patente</button>
-        </form>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <h3>Datos del vehículo</h3>
+      <div class="form-group"><label>Marca</label><input type="text"></div>
+      <div class="form-group"><label>Modelo</label><input type="text"></div>
+      <div class="form-group"><label>Año</label><input type="number"></div>
+      <div class="form-group"><label>Dominio / Patente</label><input type="text"></div>
+      <div class="form-group"><label>Nro Registro Municipal (Auto)</label><input type="text" value="REG-99221" readonly class="readonly"></div>
+      <div class="form-group"><label>Declaración</label><textarea></textarea></div>
+      <div class="form-group"><label>Fecha</label><input type="date"></div>
+      <button type="submit">Enviar Alta Patente</button>
+    </form>
 
-        <!-- Form 3: Alta Comercio -->
-        <form class="form-card mt-4">
-          <h2>Formulario: Alta Comercio e Industria</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+    <!-- Form 3: Alta Comercio -->
+    <form class="form-card mt-4">
+      <h2>Formulario: Alta Comercio e Industria</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
-          <h3>Domicilio comercial</h3>
-          <div class="form-group"><label>Dirección</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
-          <div class="form-group">
-            <label>Tipo de actividad</label>
-            <select><option>Comercial</option><option>Industrial</option><option>Servicios</option></select>
-          </div>
-          <h3>Responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>DNI</label><input type="number"></div>
-          <div class="form-group"><label>Declaración</label><textarea></textarea></div>
-          <button type="submit">Enviar Alta Comercio</button>
-        </form>
-      </section>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
+      <h3>Domicilio comercial</h3>
+      <div class="form-group"><label>Dirección</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <div class="form-group">
+        <label>Tipo de actividad</label>
+        <select><option>Comercial</option><option>Industrial</option><option>Servicios</option></select>
+      </div>
+      <h3>Responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>DNI</label><input type="number"></div>
+      <div class="form-group"><label>Declaración</label><textarea></textarea></div>
+      <button type="submit">Enviar Alta Comercio</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA BANCO -->
-      <section class="platform">
-        <h1>PLATAFORMA BANCO</h1>
-        <form class="form-card">
-          <h2>Formulario: Alta Cuenta Bancaria</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA BANCO -->
+  <section class="platform">
+    <h1>PLATAFORMA BANCO</h1>
+    <form class="form-card">
+      <h2>Formulario: Alta Cuenta Bancaria</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>Razón Social</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
-          <h3>Domicilio legal</h3>
-          <div class="form-group"><label>Calle y Número</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
-          <div class="form-group"><label>Provincia</label><input type="text"></div>
-          <h3>Responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Cargo</label>
-            <select><option>Dueño</option><option>Administrador</option><option>Encargado</option></select>
-          </div>
-          <h3>Tipo de cuentas</h3>
-          <div class="checkbox-group">
-            <label><input type="checkbox"> Cuenta Corriente</label>
-            <label><input type="checkbox"> Caja de Ahorro</label>
-          </div>
-          <h3>Uso de la cuenta</h3>
-          <div class="checkbox-group">
-            <label><input type="checkbox"> Pagos a proveedores</label>
-            <label><input type="checkbox"> Cobros</label>
-            <label><input type="checkbox"> Transferencias</label>
-            <label><input type="checkbox"> Manejo de efectivo</label>
-          </div>
-          <h3>Servicios asociados</h3>
-          <div class="checkbox-group">
-            <label><input type="checkbox"> E-Cheq</label>
-            <label><input type="checkbox"> Débito Automático</label>
-            <label><input type="checkbox"> Depósito</label>
-            <label><input type="checkbox"> Transferencias</label>
-          </div>
-          <div class="form-group"><label>Nombre Autorizado</label><input type="text"></div>
-          <button type="submit">Enviar Solicitud Banco</button>
-        </form>
-      </section>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>Razón Social</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
+      <h3>Domicilio legal</h3>
+      <div class="form-group"><label>Calle y Número</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <div class="form-group"><label>Provincia</label><input type="text"></div>
+      <h3>Responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Cargo</label>
+        <select><option>Dueño</option><option>Administrador</option><option>Encargado</option></select>
+      </div>
+      <h3>Tipo de cuentas</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Cuenta Corriente</label>
+        <label><input type="checkbox"> Caja de Ahorro</label>
+      </div>
+      <h3>Uso de la cuenta</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Pagos a proveedores</label>
+        <label><input type="checkbox"> Cobros</label>
+        <label><input type="checkbox"> Transferencias</label>
+        <label><input type="checkbox"> Manejo de efectivo</label>
+      </div>
+      <h3>Servicios asociados</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> E-Cheq</label>
+        <label><input type="checkbox"> Débito Automático</label>
+        <label><input type="checkbox"> Depósito</label>
+        <label><input type="checkbox"> Transferencias</label>
+      </div>
+      <div class="form-group"><label>Nombre Autorizado</label><input type="text"></div>
+      <button type="submit">Enviar Solicitud Banco</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA ECOGAS -->
-      <section class="platform">
-        <h1>PLATAFORMA ECOGAS</h1>
-        <form class="form-card">
-          <h2>Formulario: Alta Servicio de Gas</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre del alumno responsable</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA ECOGAS -->
+  <section class="platform">
+    <h1>PLATAFORMA ECOGAS</h1>
+    <form class="form-card">
+      <h2>Formulario: Alta Servicio de Gas</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre del alumno responsable</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
-          <h3>Domicilio del servicio</h3>
-          <div class="form-group"><label>Calle y Número</label><input type="text"></div>
-          <div class="form-group"><label>Barrio</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
-          <div class="form-group">
-            <label>Tipo de suministro</label>
-            <label><input type="radio" name="sum_gas"> Comercial</label>
-            <label><input type="radio" name="sum_gas"> Industrial</label>
-          </div>
-          <div class="form-group">
-            <label>Datos del inmueble</label>
-            <label><input type="radio" name="gas_cond" [(ngModel)]="gasCond" value="propio"> Propio</label>
-            <label><input type="radio" name="gas_cond" [(ngModel)]="gasCond" value="alquilado"> Alquilado</label>
-          </div>
-          <div *ngIf="gasCond === 'alquilado'">
-            <div class="form-group"><label>Nombre Propietario</label><input type="text"></div>
-            <div class="form-group"><label>Contrato de Alquiler (Archivo)</label><input type="file"></div>
-          </div>
-          <div class="form-group mt-3">
-            <label>
-              <input type="checkbox">
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
+      <h3>Domicilio del servicio</h3>
+      <div class="form-group"><label>Calle y Número</label><input type="text"></div>
+      <div class="form-group"><label>Barrio</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <div class="form-group">
+        <label>Tipo de suministro</label>
+        <label><input type="radio" name="sum_gas"> Comercial</label>
+        <label><input type="radio" name="sum_gas"> Industrial</label>
+      </div>
+      <div class="form-group">
+        <label>Datos del inmueble</label>
+        <label><input type="radio" name="gas_cond" [(ngModel)]="gasCond" value="propio"> Propio</label>
+        <label><input type="radio" name="gas_cond" [(ngModel)]="gasCond" value="alquilado"> Alquilado</label>
+      </div>
+      <div *ngIf="gasCond === 'alquilado'">
+        <div class="form-group"><label>Nombre Propietario</label><input type="text"></div>
+        <div class="form-group"><label>Contrato de Alquiler (Archivo)</label><input type="file"></div>
+      </div>
+      <div class="form-group mt-3">
+        <label>
+          <input type="checkbox">
               Solicito el alta de los servicios indicados y declaro que los datos son correctos.
-            </label>
-          </div>
-          <button type="submit">Enviar Solicitud Ecogas</button>
-        </form>
-      </section>
+        </label>
+      </div>
+      <button type="submit">Enviar Solicitud Ecogas</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA COOPERATIVA -->
-      <section class="platform">
-        <h1>PLATAFORMA COOPERATIVA</h1>
-        <form class="form-card">
-          <h2>Formulario: Alta Servicios Cooperativa</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA COOPERATIVA -->
+  <section class="platform">
+    <h1>PLATAFORMA COOPERATIVA</h1>
+    <form class="form-card">
+      <h2>Formulario: Alta Servicios Cooperativa</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <h3>Servicios a contratar</h3>
-          <div class="checkbox-group">
-            <label><input type="checkbox"> Energía Eléctrica</label>
-            <label><input type="checkbox"> Telefonía Fija</label>
-            <label><input type="checkbox"> Telefonía Móvil</label>
-            <label><input type="checkbox"> Internet</label>
-          </div>
-          <div class="form-group">
-            <label>Detalle Energía</label>
-            <select><option>Comercial</option><option>Industrial</option></select>
-          </div>
-          <div class="form-group">
-            <label>Líneas Fijas</label><input type="number">
-            <label>Líneas Móviles</label><input type="number">
-          </div>
-          <div class="form-group">
-            <label>Plan Internet</label>
-            <select><option>Básico</option><option>Medio</option><option>Alto</option></select>
-          </div>
-          <button type="submit">Enviar Solicitud Cooperativa</button>
-        </form>
-      </section>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <h3>Servicios a contratar</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Energía Eléctrica</label>
+        <label><input type="checkbox"> Telefonía Fija</label>
+        <label><input type="checkbox"> Telefonía Móvil</label>
+        <label><input type="checkbox"> Internet</label>
+      </div>
+      <div class="form-group">
+        <label>Detalle Energía</label>
+        <select><option>Comercial</option><option>Industrial</option></select>
+      </div>
+      <div class="form-group">
+        <label>Líneas Fijas</label><input type="number">
+        <label>Líneas Móviles</label><input type="number">
+      </div>
+      <div class="form-group">
+        <label>Plan Internet</label>
+        <select><option>Básico</option><option>Medio</option><option>Alto</option></select>
+      </div>
+      <button type="submit">Enviar Solicitud Cooperativa</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA EMAV -->
-      <section class="platform">
-        <h1>PLATAFORMA EMAV</h1>
-        <form class="form-card">
-          <h2>Formulario: Alta Servicio de Agua</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre del alumno responsable</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA EMAV -->
+  <section class="platform">
+    <h1>PLATAFORMA EMAV</h1>
+    <form class="form-card">
+      <h2>Formulario: Alta Servicio de Agua</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre del alumno responsable</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <h3>Domicilio del servicio</h3>
-          <div class="form-group"><label>Calle y Número</label><input type="text"></div>
-          <div class="form-group"><label>Barrio</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
-          <div class="form-group">
-            <label>Tipo de suministro</label>
-            <label><input type="radio" name="emav_sum"> Comercial</label>
-            <label><input type="radio" name="emav_sum"> Industrial</label>
-          </div>
-          <div class="form-group">
-            <label>Datos del inmueble</label>
-            <label><input type="radio" name="emav_cond" [(ngModel)]="emavPropCond" value="propio"> Propio</label>
-            <label><input type="radio" name="emav_cond" [(ngModel)]="emavPropCond" value="alquilado"> Alquilado</label>
-          </div>
-          <div *ngIf="emavPropCond === 'alquilado'">
-            <div class="form-group"><label>Nombre Propietario</label><input type="text"></div>
-            <div class="form-group"><label>Contrato de Alquiler (Archivo)</label><input type="file"></div>
-          </div>
-          <div class="form-group mt-3">
-            <label>
-              <input type="checkbox">
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <h3>Domicilio del servicio</h3>
+      <div class="form-group"><label>Calle y Número</label><input type="text"></div>
+      <div class="form-group"><label>Barrio</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <div class="form-group">
+        <label>Tipo de suministro</label>
+        <label><input type="radio" name="emav_sum"> Comercial</label>
+        <label><input type="radio" name="emav_sum"> Industrial</label>
+      </div>
+      <div class="form-group">
+        <label>Datos del inmueble</label>
+        <label><input type="radio" name="emav_cond" [(ngModel)]="emavPropCond" value="propio"> Propio</label>
+        <label><input type="radio" name="emav_cond" [(ngModel)]="emavPropCond" value="alquilado"> Alquilado</label>
+      </div>
+      <div *ngIf="emavPropCond === 'alquilado'">
+        <div class="form-group"><label>Nombre Propietario</label><input type="text"></div>
+        <div class="form-group"><label>Contrato de Alquiler (Archivo)</label><input type="file"></div>
+      </div>
+      <div class="form-group mt-3">
+        <label>
+          <input type="checkbox">
               Solicito el alta de los servicios indicados y declaro que los datos son correctos.
-            </label>
-          </div>
-          <button type="submit">Enviar Solicitud Agua</button>
-        </form>
-      </section>
+        </label>
+      </div>
+      <button type="submit">Enviar Solicitud Agua</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA ASEGURADORA -->
-      <section class="platform">
-        <h1>PLATAFORMA ASEGURADORA</h1>
-        <form class="form-card">
-          <h2>Formulario: Alta Seguro Vehículos</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA ASEGURADORA -->
+  <section class="platform">
+    <h1>PLATAFORMA ASEGURADORA</h1>
+    <form class="form-card">
+      <h2>Formulario: Alta Seguro Vehículos</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <h3>Domicilio del asegurado</h3>
-          <div class="form-group"><label>Calle y número</label><input type="text"></div>
-          <div class="form-group"><label>Barrio</label><input type="text"></div>
-          <div class="form-group"><label>Localidad</label><input type="text"></div>
+      <h3>Domicilio del asegurado</h3>
+      <div class="form-group"><label>Calle y número</label><input type="text"></div>
+      <div class="form-group"><label>Barrio</label><input type="text"></div>
+      <div class="form-group"><label>Localidad</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
           
-          <h3>Vehículos (Repeater)</h3>
-          <div *ngFor="let v of vehiculos; let i = index" class="repeater-item">
-            <div class="form-row">
-              <input type="text" placeholder="Marca" [(ngModel)]="v.marca" [name]="'marca'+i">
-              <input type="text" placeholder="Modelo" [(ngModel)]="v.modelo" [name]="'mod'+i">
-              <input type="text" placeholder="Patente" [(ngModel)]="v.patente" [name]="'pat'+i">
-              <input type="number" placeholder="Valor" [(ngModel)]="v.valor" [name]="'val'+i">
-            </div>
-          </div>
-          <button type="button" (click)="addVehiculo()" class="btn-add">+ Añadir Vehículo</button>
+      <h3>Vehículos (Repeater)</h3>
+      <div *ngFor="let v of vehiculos; let i = index" class="repeater-item">
+        <div class="form-row">
+          <input type="text" placeholder="Marca" [(ngModel)]="v.marca" [name]="'marca'+i">
+          <input type="text" placeholder="Modelo" [(ngModel)]="v.modelo" [name]="'mod'+i">
+          <input type="text" placeholder="Patente" [(ngModel)]="v.patente" [name]="'pat'+i">
+          <input type="number" placeholder="Valor" [(ngModel)]="v.valor" [name]="'val'+i">
+        </div>
+      </div>
+      <button type="button" (click)="addVehiculo()" class="btn-add">+ Añadir Vehículo</button>
           
-          <div class="form-group mt-3">
-            <label>Cobertura solicitada</label>
-            <select>
-              <option>Responsabilidad Civil</option>
-              <option>Terceros Completo</option>
-              <option>Todo Riesgo</option>
-            </select>
-          </div>
-          <div class="form-group mt-3">
-            <label>
-              <input type="checkbox">
+      <div class="form-group mt-3">
+        <label>Cobertura solicitada</label>
+        <select>
+          <option>Responsabilidad Civil</option>
+          <option>Terceros Completo</option>
+          <option>Todo Riesgo</option>
+        </select>
+      </div>
+      <div class="form-group mt-3">
+        <label>
+          <input type="checkbox">
               Declaro que los datos suministrados son correctos.
-            </label>
-          </div>
-          <button type="submit" class="mt-3">Enviar Solicitud Seguro</button>
-        </form>
-      </section>
+        </label>
+      </div>
+      <button type="submit" class="mt-3">Enviar Solicitud Seguro</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA INMOBILIARIA -->
-      <section class="platform">
-        <h1>PLATAFORMA INMOBILIARIA</h1>
-        <form class="form-card">
-          <h2>Formulario: Contrato de Alquiler</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+  <!-- PLATAFORMA INMOBILIARIA -->
+  <section class="platform">
+    <h1>PLATAFORMA INMOBILIARIA</h1>
+    <form class="form-card">
+      <h2>Formulario: Contrato de Alquiler</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <h3>Datos del locador</h3>
-          <div class="form-group"><label>Nombre Inmobiliaria / Dueño</label><input type="text"></div>
+      <h3>Datos del locador</h3>
+      <div class="form-group"><label>Nombre Inmobiliaria / Dueño</label><input type="text"></div>
 
-          <h3>Datos del locatario</h3>
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <div class="form-group"><label>Email</label><input type="email"></div>
-          <h3>Datos del inmueble</h3>
-          <div class="form-group"><label>Dirección Completa</label><input type="text"></div>
-          <div class="form-group">
-            <label>Tipo</label>
-            <select><option>Local Comercial</option><option>Depósito</option><option>Oficina</option></select>
-          </div>
+      <h3>Datos del locatario</h3>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>Actividad Principal</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <div class="form-group"><label>Email</label><input type="email"></div>
+      <h3>Datos del inmueble</h3>
+      <div class="form-group"><label>Dirección Completa</label><input type="text"></div>
+      <div class="form-group">
+        <label>Tipo</label>
+        <select><option>Local Comercial</option><option>Depósito</option><option>Oficina</option></select>
+      </div>
           
-          <h3>Datos del contrato</h3>
-          <div class="form-group"><label>Fecha de inicio</label><input type="date"></div>
-          <div class="form-group"><label>Duración del contrato</label><input type="text"></div>
-          <div class="form-group">
-            <label>Destino del inmueble</label>
-            <select>
-              <option>Comercial</option>
-              <option>Industrial</option>
-            </select>
-          </div>
+      <h3>Datos del contrato</h3>
+      <div class="form-group"><label>Fecha de inicio</label><input type="date"></div>
+      <div class="form-group"><label>Duración del contrato</label><input type="text"></div>
+      <div class="form-group">
+        <label>Destino del inmueble</label>
+        <select>
+          <option>Comercial</option>
+          <option>Industrial</option>
+        </select>
+      </div>
 
-          <h3>Datos económicos y Garantía</h3>
-          <div class="form-group"><label>Precio Mensual</label><input type="number"></div>
-          <div class="form-group">
-            <label>Garantía</label>
-            <select><option>Personal</option><option>Propietaria</option><option>No aplica</option></select>
-          </div>
-          <div class="form-group">
-            <label>Forma de pago</label>
-            <select>
-              <option>Transferencia</option>
-              <option>Efectivo</option>
-              <option>Cheque</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-pdf">Generar PDF Contrato</button>
-        </form>
-      </section>
+      <h3>Datos económicos y Garantía</h3>
+      <div class="form-group"><label>Precio Mensual</label><input type="number"></div>
+      <div class="form-group">
+        <label>Garantía</label>
+        <select><option>Personal</option><option>Propietaria</option><option>No aplica</option></select>
+      </div>
+      <div class="form-group">
+        <label>Forma de pago</label>
+        <select>
+          <option>Transferencia</option>
+          <option>Efectivo</option>
+          <option>Cheque</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-pdf">Generar PDF Contrato</button>
+    </form>
+  </section>
 
-      <!-- PLATAFORMA PROVEEDOR UNIVERSAL -->
-      <section class="platform">
-        <h1>PLATAFORMA PROVEEDOR UNIVERSAL</h1>
+  <!-- PLATAFORMA PROVEEDOR UNIVERSAL -->
+  <section class="platform">
+    <h1>PLATAFORMA PROVEEDOR UNIVERSAL</h1>
         
-        <form class="form-card">
-          <h2>Formulario: Inscripción Cliente</h2>
-          <h3>Datos del alumno responsable</h3>
-          <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
-          <div class="form-group"><label>Curso</label><input type="text"></div>
-          <div class="form-group"><label>División</label><input type="text"></div>
+    <form class="form-card">
+      <h2>Formulario: Inscripción Cliente</h2>
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-group"><label>Nombre y Apellido</label><input type="text"></div>
+      <div class="form-group"><label>Curso</label><input type="text"></div>
+      <div class="form-group"><label>División</label><input type="text"></div>
 
-          <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
-          <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
-          <div class="form-group"><label>Domicilio</label><input type="text"></div>
-          <div class="form-group">
-            <label>Actividad</label>
-            <select><option>Comercial</option><option>Productiva</option><option>Servicios</option></select>
-          </div>
-          <div class="form-group">
-            <label>Condición fiscal</label>
-            <label><input type="radio" name="iva"> Monotributista</label>
-            <label><input type="radio" name="iva"> Responsable Inscripto</label>
-          </div>
-          <div class="form-group"><label><input type="checkbox" checked disabled> Cuenta Corriente (Habilitada por defecto)</label></div>
-          <button type="submit">Enviar Inscripción Proveedor</button>
-        </form>
+      <div class="form-group"><label>Nombre Empresa</label><input type="text"></div>
+      <div class="form-group"><label>CUIT (Auto)</label><input type="text" [value]="cuitAuto" readonly class="readonly"></div>
+      <div class="form-group"><label>Domicilio</label><input type="text"></div>
+      <div class="form-group">
+        <label>Actividad</label>
+        <select><option>Comercial</option><option>Productiva</option><option>Servicios</option></select>
+      </div>
+      <div class="form-group">
+        <label>Condición fiscal</label>
+        <label><input type="radio" name="iva"> Monotributista</label>
+        <label><input type="radio" name="iva"> Responsable Inscripto</label>
+      </div>
+      <div class="form-group"><label><input type="checkbox" checked disabled> Cuenta Corriente (Habilitada por defecto)</label></div>
+      <button type="submit">Enviar Inscripción Proveedor</button>
+    </form>
 
-        <form class="form-card mt-4">
-          <h2>Formulario: Orden de Compra</h2>
-          <div class="form-group"><label>Nro Pedido (Auto)</label><input type="text" value="OC-2024-001" readonly class="readonly"></div>
-          <div class="form-group"><label>Fecha</label><input type="date"></div>
+    <form class="form-card mt-4">
+      <h2>Formulario: Orden de Compra</h2>
+      <div class="form-group"><label>Nro Pedido (Auto)</label><input type="text" value="OC-2024-001" readonly class="readonly"></div>
+      <div class="form-group"><label>Fecha</label><input type="date"></div>
           
-          <h3>Detalle del pedido</h3>
-          <table class="repeater-table">
-            <thead>
-              <tr>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Precio Unit.</th>
-                <th>Subtotal</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let p of productos; let i = index">
-                <td><input type="text" [(ngModel)]="p.nombre" [name]="'pname'+i"></td>
-                <td><input type="number" [(ngModel)]="p.cant" [name]="'pcant'+i"></td>
-                <td><input type="number" [(ngModel)]="p.precio" [name]="'pprecio'+i"></td>
-                <td>{{ (p.cant || 0) * (p.precio || 0) | currency }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <button type="button" (click)="addProducto()" class="btn-add">+ Añadir Producto</button>
-          <button type="submit" class="mt-3">Enviar Orden de Compra</button>
-        </form>
-      </section>
-    </div>
+      <h3>Detalle del pedido</h3>
+      <table class="repeater-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unit.</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of productos; let i = index">
+            <td><input type="text" [(ngModel)]="p.nombre" [name]="'pname'+i"></td>
+            <td><input type="number" [(ngModel)]="p.cant" [name]="'pcant'+i"></td>
+            <td><input type="number" [(ngModel)]="p.precio" [name]="'pprecio'+i"></td>
+            <td>{{ (p.cant || 0) * (p.precio || 0) | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" (click)="addProducto()" class="btn-add">+ Añadir Producto</button>
+      <button type="submit" class="mt-3">Enviar Orden de Compra</button>
+    </form>
+  </section>
+</div>

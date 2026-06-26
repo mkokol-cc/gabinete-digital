@@ -1,0 +1,31 @@
+    :root {
+        --bna-blue: #0066cc;
+        --bna-dark-blue: #004a99;
+    }
+
+    .hb-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+    }
+
+    .hb-header {
+        background-color: #0066cc;
+        color: white;
+        border-bottom: 3px solid #004a99;
+    }
+
+    .section-title .badge {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .border-end-md { border-right: 1px solid #dee2e6; }
+    }
