@@ -1,13 +1,16 @@
 <header>
   <nav class="navbar navbar-default">
     <div class="containerMenu">
-      <div class="container-fluid">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
         <div class="navbar-header">
-          <a class="navbar-brand" href="https://bna.com.ar/">
-            <img src="assets/banco/asset_0001.svg" alt="Logo del Banco Nación">
+          <a class="navbar-brand" href="#">
+            <img src="assets/banco/asset_0001.svg" alt="Logo del Banco">
           </a>
         </div>
-        <ul class="nav navbar-nav">
+        <div class="hamburger-icon">
+          <i class="bi bi-list"></i>
+        </div>
+        <ul class="nav navbar-nav d-flex flex-row h-100">
           <li class="active"><a href="#">Personas</a></li>
           <li><a href="#">Empresas</a></li>
           <li><a href="#">Institucional</a></li>
@@ -23,7 +26,7 @@
   </nav>
 </header>
 
-<div class="sliderHome">
+<div class="sliderHome d-none">
   <div class="bx-wrapper">
     <div class="bx-viewport">
       <ul class="bxslider">
@@ -43,7 +46,7 @@
   </div>
 </div>
 
-<main class="contenido">
+<main class="contenido d-none">
   <div class="containerContent">
     <div class="row">
       <div class="col-md-9">
@@ -99,7 +102,7 @@
   </div>
 </main>
 
-<aside class="containerIconosHome">
+<aside class="containerIconosHome d-none">
   <div class="IconosHome containerContent">
     <ul class="nav nav-pills nav-justified">
       <li class="imgIconos1"><a href="#">Cont&aacute;ctenos</a></li>
@@ -120,7 +123,7 @@
   </div>
 </aside>
 
-<footer>
+<footer class="d-none">
   <div class="containerContent">
     <div class="row">
       <div class="col-md-9">
@@ -176,4 +179,31 @@
       <img class="launcher-img-small" src="assets/banco/asset_0008.png" alt="Chatbot small">
     </button>
   </div>
+</div>
+
+<div class="banner">
+  <img src="assets/banco/asset_0003.jpg" alt="" class="desktop">
+  <img src="assets/banco/asset_0003.jpg" alt="" class="tablet">
+  <img src="assets/banco/banner-mobile.png" alt="" class="mobile">
+</div>
+<div class="body">
+  <div class="tablet p-3">
+    <div class="content-Homebanking-Header-mobile p-3" style="background-color: #eee;">
+      <a class="btn-Homebanking-Header Turnos w-100" href="#">Centro de ayuda</a>
+      <a class="btn-Homebanking-Header bnamasBtn w-100 text-center" href="#">
+        <img src="assets/banco/asset_0002.svg" alt="BNA+">
+      </a>
+    </div>
+  </div>
+  <div class="mobile p-3">
+    <div class="content-Homebanking-Header-mobile p-3" style="background-color: #eee;">
+      <a class="btn-Homebanking-Header Turnos w-100" href="#">Centro de ayuda</a>
+      <a class="btn-Homebanking-Header bnamasBtn w-100 text-center" href="#">
+        <img src="assets/banco/asset_0002.svg" alt="BNA+">
+      </a>
+    </div>
+  </div>
+  <img src="assets/banco/landing-body-desktop.png" alt="" class="desktop">
+  <img src="assets/banco/body-tablet.png" alt="" class="tablet">
+  <img src="assets/banco/body-mobile.png" alt="" class="mobile">
 </div>

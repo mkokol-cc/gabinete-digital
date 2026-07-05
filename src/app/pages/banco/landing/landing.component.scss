@@ -39,9 +39,8 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
 
 .navbar {
   position: relative;
-  border-radius: 4px;
-  background: #f8f8f8;
-  border: 1px solid #e7e7e7;
+  background: #005F86;
+  border: 1px solid #005F86;
 }
 
 .containerMenu {
@@ -54,7 +53,7 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
     display: block;
     padding: 15px;
     margin-left: 0;
-    img { width: auto; height: auto; }
+    img { width: 250px; height: auto; }
   }
 }
 
@@ -72,7 +71,7 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
       padding: 10px 15px;
       color: $text;
       &:hover, &:focus {
-        background: #555;
+        background: #5555;
         color: $white;
         text-decoration: none;
       }
@@ -89,11 +88,7 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
   margin: 0;
 }
 
-.content-Homebanking-Header {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+.content-Homebanking-Header, .content-Homebanking-Header-mobile {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -545,6 +540,26 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
   .Launcher.reveal-large .launcher-img-large { clip-path: inset(0); }
 }
 
+.hamburger-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: default;
+  line-height: 1;
+}
+
+@media (max-width: 950px) {
+  .nav.navbar-nav {
+    display: none !important;
+  }
+  .content-Homebanking-Header {
+    display: none !important;
+  }
+  .hamburger-icon {
+    display: block;
+  }
+}
+
 @media (max-width: 1024px) {
   .containerMenu, .containerContent, .contenido { width: 100%; }
   .sliderHome .bx-viewport { height: 300px; }
@@ -570,4 +585,46 @@ h1 { font-family: $font-light; font-weight: 500; line-height: 1.1; }
   .IconosHome li.imgIconos4 { width: 100%; margin-top: 15px; }
   .MenuHomeHor .nav-pills > li { display: block; }
   #custom-chatbot-wrapper .launcher-img-large { max-width: 150px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile {
+    display: none;
+}
+.tablet{
+  display:none;
+}
+@media (max-width: 950px) {
+  .tablet{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .mobile{
+        display: block;
+    }
+    .tablet{
+      display:none;
+    }
 }
