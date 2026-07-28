@@ -1,0 +1,78 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Alta Servicio de Agua</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Nombre Empresa</label>
+        <input type="text" formControlName="nombreEmpresa">
+      </div>
+
+      <h3>Domicilio del servicio</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Calle y Número</label>
+          <input type="text" formControlName="calleNumero">
+        </div>
+        <div class="form-group">
+          <label>Barrio</label>
+          <input type="text" formControlName="barrio">
+        </div>
+        <div class="form-group">
+          <label>Localidad</label>
+          <input type="text" formControlName="localidad">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Tipo de suministro</label>
+        <div class="radio-group">
+          <label><input type="radio" formControlName="tipoSuministro" value="comercial"> Comercial</label>
+          <label><input type="radio" formControlName="tipoSuministro" value="industrial"> Industrial</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Condición del inmueble</label>
+        <div class="radio-group">
+          <label><input type="radio" formControlName="condicionInmueble" value="propio"> Propio</label>
+          <label><input type="radio" formControlName="condicionInmueble" value="alquilado"> Alquilado</label>
+        </div>
+      </div>
+      <div *ngIf="form.get('condicionInmueble')?.value === 'alquilado'">
+        <div class="form-group">
+          <label>Nombre Propietario</label>
+          <input type="text" formControlName="nombrePropietario">
+        </div>
+        <div class="form-group">
+          <label>Contrato de Alquiler (Archivo)</label>
+          <input type="file" formControlName="contratoAlquiler">
+        </div>
+      </div>
+
+      <div class="declaration-check">
+        <input type="checkbox" formControlName="aceptaTerminos">
+        <span>Solicito el alta de los servicios indicados y declaro que los datos son correctos.</span>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Solicitud Agua</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Alta Tasa General de Inmuebles</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <h3>Datos del titular</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>CUIT</label>
+          <input type="text" formControlName="cuit" class="readonly-field" readonly>
+        </div>
+      </div>
+
+      <h3>Información del inmueble</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Dirección</label>
+          <input type="text" formControlName="direccion">
+        </div>
+        <div class="form-group">
+          <label>Barrio</label>
+          <input type="text" formControlName="barrio">
+        </div>
+        <div class="form-group">
+          <label>Localidad</label>
+          <input type="text" formControlName="localidad">
+        </div>
+        <div class="form-group">
+          <label>Identificación Inmueble</label>
+          <input type="text" formControlName="identificacionInmueble">
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre del propietario</label>
+          <input type="text" formControlName="nombrePropietario">
+        </div>
+        <div class="form-group">
+          <label>Nro Cuenta Municipal</label>
+          <input type="text" formControlName="nroCuentaMunicipal" class="readonly-field" readonly>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Tipo de Inmueble</label>
+          <select formControlName="tipoInmueble">
+            <option value="">Seleccionar...</option>
+            <option value="local_comercial">Local Comercial</option>
+            <option value="deposito">Depósito</option>
+            <option value="oficina">Oficina</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Uso del Inmueble</label>
+          <select formControlName="usoInmueble">
+            <option value="">Seleccionar...</option>
+            <option value="comercial">Comercial</option>
+            <option value="industrial">Industrial</option>
+            <option value="mixto">Mixto</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Condición del inmueble</label>
+        <div class="radio-group">
+          <label><input type="radio" formControlName="condicion" value="propio"> Propio</label>
+          <label><input type="radio" formControlName="condicion" value="alquilado"> Alquilado</label>
+        </div>
+      </div>
+      <div class="form-group" *ngIf="form.get('condicion')?.value === 'alquilado'">
+        <label>Nombre del Propietario (arrendador)</label>
+        <input type="text" formControlName="nombrePropietarioAlquilado">
+      </div>
+
+      <div class="form-group">
+        <label>Declaración</label>
+        <textarea formControlName="declaracion" placeholder="Detalle la declaración Jurada..."></textarea>
+      </div>
+
+      <div class="declaration-check">
+        <input type="checkbox" formControlName="declaracionJurada">
+        <span>Los datos revisten carácter de Declaración Jurada</span>
+      </div>
+
+      <div class="form-group mt-2">
+        <label>Firma</label>
+        <input type="text" formControlName="firma" placeholder="Firma digital">
+      </div>
+      <div class="form-group">
+        <label>Fecha</label>
+        <input type="date" formControlName="fecha">
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Alta Tasa</button>
+      </div>
+    </form>
+  </div>
+</div>

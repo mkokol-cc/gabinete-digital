@@ -1,0 +1,93 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Alta Seguro Vehículos</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <h3>Domicilio del asegurado</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Calle y número</label>
+          <input type="text" formControlName="calleNumero">
+        </div>
+        <div class="form-group">
+          <label>Barrio</label>
+          <input type="text" formControlName="barrio">
+        </div>
+        <div class="form-group">
+          <label>Localidad</label>
+          <input type="text" formControlName="localidad">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>CUIT</label>
+          <input type="text" formControlName="cuit" class="readonly-field" readonly>
+        </div>
+      </div>
+
+      <h3>Vehículos</h3>
+      <div formArrayName="vehiculos">
+        <div *ngFor="let vehiculo of vehiculos.controls; let i = index" [formGroupName]="i" class="repeater-item">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Marca</label>
+              <input type="text" formControlName="marca">
+            </div>
+            <div class="form-group">
+              <label>Modelo</label>
+              <input type="text" formControlName="modelo">
+            </div>
+            <div class="form-group">
+              <label>Patente</label>
+              <input type="text" formControlName="patente">
+            </div>
+            <div class="form-group">
+              <label>Valor</label>
+              <input type="number" formControlName="valor">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" (click)="agregarVehiculo()" class="btn-add">+ Añadir Vehículo</button>
+
+      <div class="form-group mt-3">
+        <label>Cobertura solicitada</label>
+        <select formControlName="cobertura">
+          <option value="">Seleccionar...</option>
+          <option value="responsabilidad_civil">Responsabilidad Civil</option>
+          <option value="terceros_completo">Terceros Completo</option>
+          <option value="todo_riesgo">Todo Riesgo</option>
+        </select>
+      </div>
+
+      <div class="declaration-check">
+        <input type="checkbox" formControlName="aceptaTerminos">
+        <span>Declaro que los datos suministrados son correctos.</span>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Solicitud Seguro</button>
+      </div>
+    </form>
+  </div>
+</div>

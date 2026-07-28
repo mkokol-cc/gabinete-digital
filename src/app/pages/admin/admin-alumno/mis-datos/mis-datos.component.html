@@ -1,0 +1,99 @@
+<div class="datos-container">
+  <div class="page-header">
+    <h2>Mis Datos</h2>
+  </div>
+
+  <!-- Card de perfil -->
+  <div class="perfil-card">
+    <div class="perfil-avatar">{{ iniciales }}</div>
+    <div class="perfil-info">
+      <h3>{{ usuario.nombre }} {{ usuario.apellido }}</h3>
+      <span class="perfil-rol">{{ usuario.rol.nombre }}</span>
+      <span class="perfil-email">{{ usuario.email }}</span>
+    </div>
+  </div>
+
+  <!-- Datos personales -->
+  <div class="seccion">
+    <h4 class="seccion-titulo">Datos Personales</h4>
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label">Nombre</span>
+        <span class="dato-valor">{{ usuario.nombre }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Apellido</span>
+        <span class="dato-valor">{{ usuario.apellido }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Fecha de Nacimiento</span>
+        <span class="dato-valor">{{ usuario.fechaNacimiento | date:'dd/MM/yyyy' }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Domicilio</span>
+        <span class="dato-valor">{{ usuario.domicilio }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Teléfono</span>
+        <span class="dato-valor">{{ usuario.telefono }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Email</span>
+        <span class="dato-valor">{{ usuario.email }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datos de cuenta -->
+  <div class="seccion">
+    <h4 class="seccion-titulo">Datos de Cuenta</h4>
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label">Usuario</span>
+        <span class="dato-valor mono">{{ usuario.username }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Legajo</span>
+        <span class="dato-valor mono">{{ usuario.legajo }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Rol</span>
+        <span class="dato-valor"><span class="rol-badge">{{ usuario.rol.nombre }}</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datos de entidad -->
+  <div class="seccion">
+    <h4 class="seccion-titulo">Entidad Asociada</h4>
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label">Nombre</span>
+        <span class="dato-valor">{{ usuario.entidad.nombre }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">CUIT</span>
+        <span class="dato-valor mono">{{ usuario.entidad.cuit }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Tipo</span>
+        <span class="dato-valor"><span class="tipo-badge">{{ usuario.entidad.tipo }}</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datos académicos -->
+  <div class="seccion">
+    <h4 class="seccion-titulo">Datos Académicos</h4>
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label">Carrera</span>
+        <span class="dato-valor">{{ usuario.carrera }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label">Año de Ingreso</span>
+        <span class="dato-valor">{{ usuario.anioIngreso }}</span>
+      </div>
+    </div>
+  </div>
+</div>

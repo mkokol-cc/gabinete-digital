@@ -1,0 +1,55 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Orden de Compra</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nro Pedido</label>
+          <input type="text" formControlName="nroPedido" class="readonly-field" readonly>
+        </div>
+        <div class="form-group">
+          <label>Fecha</label>
+          <input type="date" formControlName="fecha">
+        </div>
+      </div>
+
+      <h3>Detalle del pedido</h3>
+      <div formArrayName="productos">
+        <table class="repeater-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio Unit.</th>
+              <th>Subtotal</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productos.controls; let i = index" [formGroupName]="i">
+              <td><input type="text" formControlName="nombre" placeholder="Nombre producto"></td>
+              <td><input type="number" formControlName="cantidad" min="1"></td>
+              <td><input type="number" formControlName="precioUnitario" min="0"></td>
+              <td class="subtotal">{{ calcularSubtotal(producto.get('cantidad')?.value, producto.get('precioUnitario')?.value) | currency }}</td>
+              <td>
+                <button type="button" (click)="eliminarProducto(i)" class="btn-remove" *ngIf="productos.length > 1">✕</button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" style="text-align: right; font-weight: 600;">Total</td>
+              <td style="font-weight: 700; color: #4285f4;">{{ calcularTotal() | currency }}</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <button type="button" (click)="agregarProducto()" class="btn-add">+ Añadir Producto</button>
+
+      <div class="actions">
+        <button type="submit">Enviar Orden de Compra</button>
+      </div>
+    </form>
+  </div>
+</div>

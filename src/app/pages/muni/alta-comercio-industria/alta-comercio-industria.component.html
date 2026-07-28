@@ -1,0 +1,79 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Alta Comercio e Industria</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>CUIT</label>
+          <input type="text" formControlName="cuit" class="readonly-field" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Actividad Principal</label>
+        <input type="text" formControlName="actividadPrincipal">
+      </div>
+
+      <h3>Domicilio comercial</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Dirección</label>
+          <input type="text" formControlName="direccion">
+        </div>
+        <div class="form-group">
+          <label>Localidad</label>
+          <input type="text" formControlName="localidad">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tipo de actividad</label>
+        <select formControlName="tipoActividad">
+          <option value="">Seleccionar...</option>
+          <option value="comercial">Comercial</option>
+          <option value="industrial">Industrial</option>
+          <option value="servicios">Servicios</option>
+        </select>
+      </div>
+
+      <h3>Responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreResponsable">
+        </div>
+        <div class="form-group">
+          <label>DNI</label>
+          <input type="number" formControlName="dni">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Declaración</label>
+        <textarea formControlName="declaracion" placeholder="Detalle la declaración..."></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Alta Comercio</button>
+      </div>
+    </form>
+  </div>
+</div>

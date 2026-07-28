@@ -1,0 +1,74 @@
+<div class="tramites-container">
+  <div class="page-header">
+    <h2>Mis Trámites</h2>
+    <span class="count">{{ tramites.length }} trámites</span>
+  </div>
+
+  <!-- Vista escritorio: tabla -->
+  <div class="table-wrapper">
+    <table class="tramites-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Origen</th>
+          <th>Destino</th>
+          <th>Fecha</th>
+          <th>Tipo</th>
+          <th>Estado</th>
+          <th>Monto</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (tramite of tramites; track tramite.id) {
+          <tr>
+            <td class="cell-id">{{ tramite.id }}</td>
+            <td class="cell-titulo">{{ tramite.titulo }}</td>
+            <td>{{ tramite.entidadOrigen }}</td>
+            <td>{{ tramite.entidadDestino }}</td>
+            <td class="cell-fecha">{{ tramite.fecha | date:'dd/MM/yyyy' }}</td>
+            <td><span class="badge" [ngClass]="getTipoClass(tramite.tipo)">{{ tramite.tipo }}</span></td>
+            <td><span class="badge-estado" [ngClass]="getEstadoClass(tramite.estado)">{{ tramite.estado }}</span></td>
+            <td class="cell-monto">{{ tramite.monto ? (tramite.monto | currency:'ARS':'symbol':'1.0-0') : '—' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Vista mobile: tarjetas -->
+  <div class="cards-mobile">
+    @for (tramite of tramites; track tramite.id) {
+      <div class="tramite-card">
+        <div class="card-header">
+          <span class="card-id">{{ tramite.id }}</span>
+          <span class="badge" [ngClass]="getTipoClass(tramite.tipo)">{{ tramite.tipo }}</span>
+        </div>
+        <h4 class="card-titulo">{{ tramite.titulo }}</h4>
+        <div class="card-meta">
+          <div class="meta-row">
+            <span class="meta-label">Origen:</span>
+            <span>{{ tramite.entidadOrigen }}</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Destino:</span>
+            <span>{{ tramite.entidadDestino }}</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Fecha:</span>
+            <span>{{ tramite.fecha | date:'dd/MM/yyyy' }}</span>
+          </div>
+          @if (tramite.monto) {
+            <div class="meta-row">
+              <span class="meta-label">Monto:</span>
+              <span class="monto">{{ tramite.monto | currency:'ARS':'symbol':'1.0-0' }}</span>
+            </div>
+          }
+        </div>
+        <div class="card-footer">
+          <span class="badge-estado" [ngClass]="getEstadoClass(tramite.estado)">{{ tramite.estado }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

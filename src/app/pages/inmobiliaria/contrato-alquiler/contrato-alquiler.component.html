@@ -1,0 +1,117 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Contrato de Alquiler</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <h3>Datos del locador</h3>
+      <div class="form-group">
+        <label>Nombre Inmobiliaria / Dueño</label>
+        <input type="text" formControlName="nombreLocador">
+      </div>
+
+      <h3>Datos del locatario</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>Actividad Principal</label>
+          <input type="text" formControlName="actividadPrincipal">
+        </div>
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>CUIT</label>
+          <input type="text" formControlName="cuit" class="readonly-field" readonly>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email">
+        </div>
+      </div>
+
+      <h3>Datos del inmueble</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Dirección Completa</label>
+          <input type="text" formControlName="direccionInmueble">
+        </div>
+        <div class="form-group">
+          <label>Tipo</label>
+          <select formControlName="tipoInmueble">
+            <option value="">Seleccionar...</option>
+            <option value="local_comercial">Local Comercial</option>
+            <option value="deposito">Depósito</option>
+            <option value="oficina">Oficina</option>
+          </select>
+        </div>
+      </div>
+
+      <h3>Datos del contrato</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Fecha de inicio</label>
+          <input type="date" formControlName="fechaInicio">
+        </div>
+        <div class="form-group">
+          <label>Duración del contrato</label>
+          <input type="text" formControlName="duracionContrato" placeholder="Ej: 36 meses">
+        </div>
+        <div class="form-group">
+          <label>Destino del inmueble</label>
+          <select formControlName="destinoInmueble">
+            <option value="">Seleccionar...</option>
+            <option value="comercial">Comercial</option>
+            <option value="industrial">Industrial</option>
+          </select>
+        </div>
+      </div>
+
+      <h3>Datos económicos y Garantía</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Precio Mensual</label>
+          <input type="number" formControlName="precioMensual">
+        </div>
+        <div class="form-group">
+          <label>Garantía</label>
+          <select formControlName="garantia">
+            <option value="">Seleccionar...</option>
+            <option value="personal">Personal</option>
+            <option value="propietaria">Propietaria</option>
+            <option value="no_aplica">No aplica</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Forma de pago</label>
+          <select formControlName="formaPago">
+            <option value="">Seleccionar...</option>
+            <option value="transferencia">Transferencia</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="cheque">Cheque</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-pdf">Generar PDF Contrato</button>
+      </div>
+    </form>
+  </div>
+</div>

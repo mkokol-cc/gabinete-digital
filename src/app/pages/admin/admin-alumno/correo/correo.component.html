@@ -1,0 +1,32 @@
+<div class="correo-container">
+  <div class="page-header">
+    <h2>Bandeja de Entrada</h2>
+    <span class="count">{{ mensajes.length }} mensajes</span>
+  </div>
+
+  <div class="inbox-list">
+    @for (mensaje of mensajes; track mensaje.id) {
+      <div class="inbox-item" [class.no-leido]="!mensaje.leido" (click)="toggleLeido(mensaje)">
+        <div class="item-indicator">
+          @if (!mensaje.leido) {
+            <span class="punto-no-leido"></span>
+          }
+        </div>
+        <div class="item-avatar" [ngClass]="getTipoClass(mensaje.tipo)">
+          {{ mensaje.remitente.charAt(0) }}
+        </div>
+        <div class="item-content">
+          <div class="item-top">
+            <span class="remitente" [class.fuerte]="!mensaje.leido">{{ mensaje.remitente }}</span>
+            <span class="fecha">{{ getFecha(mensaje.fecha) }}</span>
+          </div>
+          <div class="item-asunto" [class.fuerte]="!mensaje.leido">{{ mensaje.asunto }}</div>
+          <div class="item-preview">{{ mensaje.preview }}</div>
+        </div>
+        <div class="item-tipo">
+          <span class="tipo-badge" [ngClass]="getTipoClass(mensaje.tipo)">{{ mensaje.tipo }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

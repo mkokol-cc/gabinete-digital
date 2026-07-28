@@ -1,0 +1,79 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Alta Servicios Cooperativa</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>Actividad Principal</label>
+          <input type="text" formControlName="actividadPrincipal">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>CUIT</label>
+        <input type="text" formControlName="cuit" class="readonly-field" readonly>
+      </div>
+
+      <h3>Servicios a contratar</h3>
+      <div formGroupName="servicios" class="checkbox-group">
+        <label><input type="checkbox" formControlName="energia"> Energía Eléctrica</label>
+        <label><input type="checkbox" formControlName="telefoniaFija"> Telefonía Fija</label>
+        <label><input type="checkbox" formControlName="telefoniaMovil"> Telefonía Móvil</label>
+        <label><input type="checkbox" formControlName="internet"> Internet</label>
+      </div>
+
+      <div class="form-group">
+        <label>Detalle Energía</label>
+        <select formControlName="detalleEnergia">
+          <option value="">Seleccionar...</option>
+          <option value="comercial">Comercial</option>
+          <option value="industrial">Industrial</option>
+        </select>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Líneas Fijas</label>
+          <input type="number" formControlName="lineasFijas" min="0">
+        </div>
+        <div class="form-group">
+          <label>Líneas Móviles</label>
+          <input type="number" formControlName="lineasMoviles" min="0">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Plan Internet</label>
+        <select formControlName="planInternet">
+          <option value="">Seleccionar...</option>
+          <option value="basico">Básico</option>
+          <option value="medio">Medio</option>
+          <option value="alto">Alto</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Solicitud Cooperativa</button>
+      </div>
+    </form>
+  </div>
+</div>

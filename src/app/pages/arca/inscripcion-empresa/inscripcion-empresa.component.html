@@ -1,0 +1,91 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Inscripción Empresa</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <h3>Credenciales de acceso</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Usuario</label>
+          <input type="text" formControlName="usuario">
+        </div>
+        <div class="form-group">
+          <label>Clave</label>
+          <input type="password" formControlName="clave">
+        </div>
+        <div class="form-group">
+          <label>Repetir Clave</label>
+          <input type="password" formControlName="repetirClave">
+        </div>
+      </div>
+
+      <h3>Datos de la empresa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>Actividad Principal</label>
+          <select formControlName="actividadPrincipal">
+            <option value="">Seleccionar...</option>
+            <option value="venta_minorista">Venta minorista</option>
+            <option value="servicios_informaticos">Servicios informáticos</option>
+            <option value="construccion">Construcción</option>
+            <option value="servicios_profesionales">Servicios Profesionales</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Domicilio</label>
+        <input type="text" formControlName="domicilio">
+      </div>
+      <div class="form-group">
+        <label>CUIT Generado</label>
+        <input type="text" formControlName="cuit" class="readonly-field" readonly>
+      </div>
+
+      <h3>Impuestos</h3>
+      <div formGroupName="impuestos" class="checkbox-group">
+        <label><input type="checkbox" formControlName="iva"> IVA</label>
+        <label><input type="checkbox" formControlName="monotributo"> Monotributo</label>
+        <label><input type="checkbox" formControlName="autonomos"> Autónomos</label>
+        <label><input type="checkbox" formControlName="ganancias"> Ganancias</label>
+      </div>
+
+      <div class="declaration-check">
+        <input type="checkbox" formControlName="aceptaTerminos">
+        <span>Acepto los Términos y Condiciones de la plataforma ARCA</span>
+      </div>
+
+      <div class="form-group mt-2">
+        <label>Firma Digital (Representación)</label>
+        <div class="signature-pad">Área de firma</div>
+      </div>
+
+      <div class="form-group">
+        <label>Fecha</label>
+        <input type="date" formControlName="fecha">
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Inscripción</button>
+      </div>
+    </form>
+  </div>
+</div>

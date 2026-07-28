@@ -50,9 +50,9 @@
             </div>
             <div class="d-flex justify-content-center my-2">
                 <span class="text-size-12 pe-2"><b>Tipo de Comprobante</b></span>
-                <select class="text-size-12" name="" id="">
+                <select class="text-size-12" name="selectTipoComprobante" id="selectTipoComprobante" [(ngModel)]="selectedTipoComprobante">
                     <option value="" selected disabled hidden>Seleccionar...</option>
-                    <option value="2">Factura C</option>
+                    <option value="c">Factura C</option>
                     <option value="3" disabled>Nota de Débito C</option>
                     <option value="4" disabled>Nota de Crédito C</option>
                     <option value="5" disabled>Recibo C</option>
@@ -64,7 +64,7 @@
         </div>
         <div class="d-flex justify-content-center pb-3">
             <button (click)="step=1">< Volver</button>
-            <button>Continuar ></button>
+            <button (click)="toSelectTipoComprobante()">Continuar</button>
         </div>
     </div>
 }

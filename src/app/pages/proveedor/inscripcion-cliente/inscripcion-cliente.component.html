@@ -1,0 +1,64 @@
+<div class="form-container">
+  <div class="form-card">
+    <h2>Inscripción Cliente</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h3>Datos del alumno responsable</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre y Apellido</label>
+          <input type="text" formControlName="nombreAlumno">
+        </div>
+        <div class="form-group">
+          <label>Curso</label>
+          <input type="text" formControlName="curso">
+        </div>
+        <div class="form-group">
+          <label>División</label>
+          <input type="text" formControlName="division">
+        </div>
+      </div>
+
+      <h3>Datos de la empresa</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nombre Empresa</label>
+          <input type="text" formControlName="nombreEmpresa">
+        </div>
+        <div class="form-group">
+          <label>CUIT</label>
+          <input type="text" formControlName="cuit" class="readonly-field" readonly>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Domicilio</label>
+        <input type="text" formControlName="domicilio">
+      </div>
+      <div class="form-group">
+        <label>Actividad</label>
+        <select formControlName="actividad">
+          <option value="">Seleccionar...</option>
+          <option value="comercial">Comercial</option>
+          <option value="productiva">Productiva</option>
+          <option value="servicios">Servicios</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Condición fiscal</label>
+        <div class="radio-group">
+          <label><input type="radio" formControlName="condicionFiscal" value="monotributista"> Monotributista</label>
+          <label><input type="radio" formControlName="condicionFiscal" value="responsable_inscripto"> Responsable Inscripto</label>
+        </div>
+      </div>
+
+      <div class="declaration-check">
+        <input type="checkbox" formControlName="cuentaCorriente">
+        <span>Cuenta Corriente (Habilitada por defecto)</span>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Enviar Inscripción Proveedor</button>
+      </div>
+    </form>
+  </div>
+</div>

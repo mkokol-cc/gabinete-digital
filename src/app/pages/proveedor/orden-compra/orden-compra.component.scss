@@ -1,0 +1,27 @@
+@use '../../../forms/form-card' as *;
+
+.btn-remove {
+  background: none;
+  border: 1.5px solid #ea4335;
+  color: #ea4335;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+
+  &:hover {
+    background: #ea4335;
+    color: #ffffff;
+  }
+}
+
+.subtotal {
+  font-weight: 600;
+  color: #3c4043;
+}
