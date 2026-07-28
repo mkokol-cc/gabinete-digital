@@ -1,0 +1,303 @@
+$primary: #e20039;
+$primary-hover: #b31130;
+$primary-dark: #5b2c36;
+$white: #fff;
+$dark: #333;
+$gray: #6c757d;
+$gray-light: #ccc;
+$gray-bg: #f8f9fa;
+$font-family: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$sidebar-width: 250px;
+$header-height: 64px;
+$bottom-nav-height: 64px;
+
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 300; src: url("/assets/seguro/asset_0042.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 400; src: url("/assets/seguro/asset_0043.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 500; src: url("/assets/seguro/asset_0044.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 600; src: url("/assets/seguro/asset_0045.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 700; src: url("/assets/seguro/asset_0046.woff2") format("woff2"); }
+
+@font-face { font-family: "FontAwesome"; src: url("/assets/seguro/asset_0047.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-bars:before { content: "\f0c9"; }
+.fa-credit-card:before { content: "\f09d"; }
+.fa-plus-circle:before { content: "\f055"; }
+.fa-user:before { content: "\f007"; }
+.fa-sign-out:before { content: "\f08b"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-times-circle:before { content: "\f057"; }
+.fa-arrow-right:before { content: "\f061"; }
+.fa-calendar:before { content: "\f073"; }
+.fa-phone:before { content: "\f095"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-map-marker:before { content: "\f041"; }
+.fa-chevron-right:before { content: "\f054"; }
+.fa-shield:before { content: "\f132"; }
+.fa-home:before { content: "\f015"; }
+.fa-heart:before { content: "\f004"; }
+.fa-car:before { content: "\f1b9"; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.menu-shell {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $dark;
+  background: $gray-bg;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $header-height;
+  background: $white;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    img { height: 40px; }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .user-greeting {
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  .btn-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: $dark;
+    font-size: 18px;
+    &:hover { background: $gray-bg; }
+  }
+}
+
+.menu-body {
+  display: flex;
+  flex: 1;
+  margin-top: $header-height;
+  padding-bottom: 0;
+
+  @media (max-width: 767px) {
+    padding-bottom: $bottom-nav-height;
+  }
+}
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background: $white;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 767px) {
+    transform: translateX(-100%);
+    z-index: 90;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.2s;
+
+  .fa {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    color: #999;
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    background: #fef0f3;
+    color: $primary;
+    .fa { color: $primary; }
+  }
+
+  &.active {
+    background: $primary;
+    color: $white;
+    .fa { color: $white; }
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+
+  &.sidebar-logout {
+    margin-top: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+
+    &:hover {
+      background: #fff0f0;
+      color: #dc3545;
+      .fa { color: #dc3545; }
+    }
+  }
+}
+
+.sidebar-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #eee;
+
+  .sidebar-logo {
+    height: 24px;
+    opacity: 0.5;
+  }
+}
+
+.sidebar-overlay {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 80;
+  }
+}
+
+.content-area {
+  flex: 1;
+  margin-left: $sidebar-width;
+  padding: 30px;
+  overflow-y: auto;
+  min-height: calc(100vh - $header-height);
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $bottom-nav-height;
+  background: $white;
+  border-top: 1px solid #eee;
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.bottom-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #999;
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.2s;
+
+  .fa {
+    font-size: 20px;
+  }
+
+  &:hover { color: $primary; }
+
+  &.active {
+    color: $primary;
+  }
+}
+
+:host ::ng-deep .form-container {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+
+  .form-card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-header {
+    .user-greeting { display: none; }
+    .btn-toggle { display: block; }
+  }
+
+  .content-area {
+    padding: 16px;
+  }
+}

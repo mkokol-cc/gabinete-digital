@@ -7,6 +7,14 @@
 #nav{
     background-color: #0049af;
     box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
+    position: relative;
+}
+#btn-menu{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fb5900;
 }
 #menu img{
     width: 220px;

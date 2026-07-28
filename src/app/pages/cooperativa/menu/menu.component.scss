@@ -1,0 +1,314 @@
+$primary: #003366;
+$primary-hover: #004d99;
+$accent: #99CC00;
+$white: #fff;
+$dark: #333;
+$gray: #6c757d;
+$gray-light: #ddd;
+$gray-bg: #f2f2f2;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$sidebar-width: 250px;
+$header-height: 64px;
+$bottom-nav-height: 64px;
+
+@font-face { font-family: "Font Awesome 5 Free"; font-style: normal; font-weight: 900; src: url("/assets/cooperativa/asset_0074.woff2") format("woff2"); }
+@font-face { font-family: "Font Awesome 5 Free"; font-style: normal; font-weight: 400; src: url("/assets/cooperativa/asset_0075.woff2") format("woff2"); }
+@font-face { font-family: "Font Awesome 5 Brands"; font-style: normal; font-weight: 400; src: url("/assets/cooperativa/asset_0076.woff2") format("woff2"); }
+
+.fas, .far, .fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+.fas { font-family: "Font Awesome 5 Free"; font-weight: 900; }
+.far { font-family: "Font Awesome 5 Free"; font-weight: 400; }
+.fab { font-family: "Font Awesome 5 Brands"; font-weight: 400; }
+
+.fa-bars:before { content: "\f0c9"; }
+.fa-home:before { content: "\f015"; }
+.fa-user:before { content: "\f007"; }
+.fa-bolt:before { content: "\f0e7"; }
+.fa-sign-out-alt:before { content: "\f2f5"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-arrow-right:before { content: "\f061"; }
+.fa-calendar-alt:before { content: "\f073"; }
+.fa-phone:before { content: "\f095"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-map-marker-alt:before { content: "\f3c5"; }
+.fa-credit-card:before { content: "\f09d"; }
+.fa-lightbulb:before { content: "\f0eb"; }
+.fa-wifi:before { content: "\f1eb"; }
+.fa-tv:before { content: "\f26c"; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.menu-shell {
+  font-family: $font-family;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $dark;
+  background: $gray-bg;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $header-height;
+  background: $white;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .user-greeting {
+    font-size: 14px;
+    font-weight: 500;
+    color: $gray;
+  }
+
+  .btn-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: $dark;
+    font-size: 18px;
+    &:hover { background: $gray-bg; }
+  }
+}
+
+.menu-body {
+  display: flex;
+  flex: 1;
+  margin-top: $header-height;
+  padding-bottom: 0;
+
+  @media (max-width: 767px) {
+    padding-bottom: $bottom-nav-height;
+  }
+}
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background: $white;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 767px) {
+    transform: translateX(-100%);
+    z-index: 90;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.2s;
+
+  .fas, .far, .fab {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    color: #999;
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    background: #e8f0fe;
+    color: $primary;
+    .fas, .far, .fab { color: $primary; }
+  }
+
+  &.active {
+    background: $primary;
+    color: $white;
+    .fas, .far, .fab { color: $white; }
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+
+  &.sidebar-logout {
+    margin-top: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+
+    &:hover {
+      background: #fff0f0;
+      color: #dc3545;
+      .fas { color: #dc3545; }
+    }
+  }
+}
+
+.sidebar-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #eee;
+
+  .sidebar-logo {
+    height: 28px;
+    opacity: 0.4;
+  }
+}
+
+.sidebar-overlay {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 80;
+  }
+}
+
+.content-area {
+  flex: 1;
+  margin-left: $sidebar-width;
+  padding: 30px;
+  overflow-y: auto;
+  min-height: calc(100vh - $header-height);
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $bottom-nav-height;
+  background: $white;
+  border-top: 1px solid #eee;
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.bottom-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #999;
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.2s;
+
+  .fas, .far, .fab {
+    font-size: 20px;
+  }
+
+  &:hover { color: $primary; }
+
+  &.active {
+    color: $primary;
+  }
+}
+
+:host ::ng-deep .form-container {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+
+  .form-card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-header {
+    .user-greeting { display: none; }
+    .btn-toggle { display: block; }
+    .logo-text { display: none; }
+  }
+
+  .content-area {
+    padding: 16px;
+  }
+}

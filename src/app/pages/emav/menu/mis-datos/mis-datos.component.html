@@ -1,0 +1,52 @@
+<div class="mis-datos">
+
+  <div class="perfil-header">
+    <div class="perfil-avatar">
+      <i class="fa fa-user"></i>
+    </div>
+    <div class="perfil-titulo">
+      <h1>{{ usuario.nombre }}</h1>
+      <p>Tus datos personales</p>
+    </div>
+  </div>
+
+  <div class="datos-card">
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-id-card"></i> Cliente N°</span>
+        <span class="dato-valor">{{ usuario.cliente }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-envelope"></i> Email</span>
+        <span class="dato-valor">{{ usuario.email }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-phone"></i> Teléfono</span>
+        <span class="dato-valor">{{ usuario.telefono }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-credit-card"></i> DNI</span>
+        <span class="dato-valor">{{ usuario.dni }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-map-marker"></i> Dirección</span>
+        <span class="dato-valor">{{ usuario.direccion }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-tag"></i> Categoría</span>
+        <span class="dato-valor">{{ usuario.categoria }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="fa fa-calendar"></i> Fecha de alta</span>
+        <span class="dato-valor">{{ usuario.fechaAlta }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="datos-actions">
+    <button class="btn-editar" disabled>
+      <i class="fa fa-pencil"></i> Editar datos
+    </button>
+  </div>
+
+</div>

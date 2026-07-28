@@ -1,0 +1,70 @@
+<div class="menu-shell">
+
+  <header class="menu-header">
+    <div class="header-inner">
+      <a routerLink="/seguro" class="header-logo">
+        <img src="assets/seguro/asset_0007.svg" alt="La Segunda Seguros">
+      </a>
+      <div class="header-actions">
+        <span class="user-greeting">Juan Pérez</span>
+        <button class="btn-toggle" (click)="sidebarOpen = !sidebarOpen" aria-label="Menú">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-body">
+
+    <aside class="sidebar" [class.open]="sidebarOpen">
+      <nav class="sidebar-nav">
+        <a routerLink="/seguro/menu/mis-cuentas" routerLinkActive="active" class="sidebar-link">
+          <i class="fa fa-credit-card"></i>
+          <span>Mis Cuentas</span>
+        </a>
+        <a routerLink="/seguro/menu/alta" routerLinkActive="active" class="sidebar-link">
+          <i class="fa fa-plus-circle"></i>
+          <span>Alta</span>
+        </a>
+        <a routerLink="/seguro/menu/mis-datos" routerLinkActive="active" class="sidebar-link">
+          <i class="fa fa-user"></i>
+          <span>Mis Datos</span>
+        </a>
+        <a routerLink="/seguro" class="sidebar-link sidebar-logout">
+          <i class="fa fa-sign-out"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <img src="assets/seguro/asset_0025.svg" alt="La Segunda" class="sidebar-logo">
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" *ngIf="sidebarOpen" (click)="sidebarOpen = false"></div>
+
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <a routerLink="/seguro/menu/mis-cuentas" routerLinkActive="active" class="bottom-link">
+      <i class="fa fa-credit-card"></i>
+      <span>Cuentas</span>
+    </a>
+    <a routerLink="/seguro/menu/alta" routerLinkActive="active" class="bottom-link">
+      <i class="fa fa-plus-circle"></i>
+      <span>Alta</span>
+    </a>
+    <a routerLink="/seguro/menu/mis-datos" routerLinkActive="active" class="bottom-link">
+      <i class="fa fa-user"></i>
+      <span>Datos</span>
+    </a>
+    <a routerLink="/seguro" class="bottom-link">
+      <i class="fa fa-sign-out"></i>
+      <span>Salir</span>
+    </a>
+  </nav>
+
+</div>

@@ -1,0 +1,52 @@
+<div class="mis-datos">
+
+  <div class="perfil-header">
+    <div class="perfil-avatar">
+      <i class="bi bi-person-vcard"></i>
+    </div>
+    <div class="perfil-titulo">
+      <h1>{{ usuario.nombre }}</h1>
+      <p>Datos del titular</p>
+    </div>
+  </div>
+
+  <div class="datos-card">
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-tag"></i> Cliente N°</span>
+        <span class="dato-valor">{{ usuario.cliente }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-file-earmark-text"></i> CUIT</span>
+        <span class="dato-valor">{{ usuario.cuit }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-envelope"></i> Email</span>
+        <span class="dato-valor">{{ usuario.email }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-telephone"></i> Teléfono</span>
+        <span class="dato-valor">{{ usuario.telefono }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-geo-alt"></i> Dirección</span>
+        <span class="dato-valor">{{ usuario.direccion }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-person-badge"></i> Categoría</span>
+        <span class="dato-valor">{{ usuario.categoria }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-calendar"></i> Fecha de alta</span>
+        <span class="dato-valor">{{ usuario.fechaAlta }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="datos-actions">
+    <button class="btn-editar" disabled>
+      <i class="bi bi-pencil"></i> Editar datos
+    </button>
+  </div>
+
+</div>

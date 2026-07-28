@@ -1,48 +1,87 @@
-<!-- Formulario de ejemplo -->
-<div class="mt-5">
-    <h4 class="mb-4">Ejemplo de Formulario de Trámite</h4>
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="form-label">Nombre completo</label>
-                                <input type="text" class="form-control" placeholder="Juan Pérez">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">DNI</label>
-                                <input type="text" class="form-control" placeholder="12.345.678">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" placeholder="ejemplo@email.com">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label">Teléfono</label>
-                                <input type="tel" class="form-control" placeholder="3533 422150">
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label">Tipo de trámite</label>
-                                <select class="form-select">
-                                    <option>Seleccionar...</option>
-                                    <option>Certificado de domicilio</option>
-                                    <option>Pago de tasas</option>
-                                    <option>Consulta de deuda</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label class="form-label">Descripción</label>
-                                <textarea class="form-control" rows="4" placeholder="Detalle el trámite..."></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary px-5">Enviar Trámite</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<div class="menu-shell">
+
+  <header class="menu-header">
+    <div class="header-inner">
+      <a routerLink="/muni" class="header-logo">
+        <img src="assets/muni/logo.png" alt="Municipalidad de Las Varillas" class="logo-img">
+        <span class="logo-text">Municipalidad de Las Varillas</span>
+      </a>
+      <div class="header-actions">
+        <span class="user-greeting">Juan Pérez</span>
+        <button class="btn-toggle" (click)="sidebarOpen = !sidebarOpen" aria-label="Menú">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
     </div>
+  </header>
+
+  <div class="menu-body">
+
+    <aside class="sidebar" [class.open]="sidebarOpen">
+      <nav class="sidebar-nav">
+        <a routerLink="/muni/menu/mis-cuentas" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-house-door"></i>
+          <span>Mis Cuentas</span>
+        </a>
+        <a routerLink="/muni/menu/mis-datos" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-person-vcard"></i>
+          <span>Mis Datos</span>
+        </a>
+        <a routerLink="/muni/menu/alta-comercio-industria" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-shop"></i>
+          <span>Alta Comercio/Industria</span>
+        </a>
+        <a routerLink="/muni/menu/alta-tasa-inmuebles" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-building"></i>
+          <span>Alta Tasa Inmuebles</span>
+        </a>
+        <a routerLink="/muni/menu/alta-patente-municipal" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-truck-front"></i>
+          <span>Alta Patente Municipal</span>
+        </a>
+        <a routerLink="/muni" class="sidebar-link sidebar-logout">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <img src="assets/muni/logo.png" alt="Muni" class="sidebar-logo">
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" *ngIf="sidebarOpen" (click)="sidebarOpen = false"></div>
+
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <a routerLink="/muni/menu/mis-cuentas" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-house-door"></i>
+      <span>Cuentas</span>
+    </a>
+    <a routerLink="/muni/menu/mis-datos" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-person-vcard"></i>
+      <span>Datos</span>
+    </a>
+    <a routerLink="/muni/menu/alta-comercio-industria" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-shop"></i>
+      <span>Comercio</span>
+    </a>
+    <a routerLink="/muni/menu/alta-tasa-inmuebles" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-building"></i>
+      <span>Tasa</span>
+    </a>
+    <a routerLink="/muni/menu/alta-patente-municipal" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-truck-front"></i>
+      <span>Patente</span>
+    </a>
+    <a routerLink="/muni" class="bottom-link">
+      <i class="bi bi-box-arrow-right"></i>
+      <span>Salir</span>
+    </a>
+  </nav>
+
 </div>

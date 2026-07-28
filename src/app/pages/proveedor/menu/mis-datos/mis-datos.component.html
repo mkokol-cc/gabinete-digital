@@ -1,0 +1,52 @@
+<div class="mis-datos">
+
+  <div class="perfil-header">
+    <div class="perfil-avatar">
+      <i class="bi bi-building"></i>
+    </div>
+    <div class="perfil-titulo">
+      <h1>{{ usuario.razonSocial }}</h1>
+      <p>Datos de la empresa</p>
+    </div>
+  </div>
+
+  <div class="datos-card">
+    <div class="datos-grid">
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-tag"></i> Cliente N°</span>
+        <span class="dato-valor">{{ usuario.cliente }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-file-earmark-text"></i> CUIT</span>
+        <span class="dato-valor">{{ usuario.cuit }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-envelope"></i> Email</span>
+        <span class="dato-valor">{{ usuario.email }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-telephone"></i> Teléfono</span>
+        <span class="dato-valor">{{ usuario.telefono }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-geo-alt"></i> Dirección</span>
+        <span class="dato-valor">{{ usuario.direccion }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-cash-stack"></i> Condición Fiscal</span>
+        <span class="dato-valor">{{ usuario.condicionFiscal }}</span>
+      </div>
+      <div class="dato-item">
+        <span class="dato-label"><i class="bi bi-briefcase"></i> Actividad</span>
+        <span class="dato-valor">{{ usuario.actividad }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="datos-actions">
+    <button class="btn-editar" disabled>
+      <i class="bi bi-pencil"></i> Editar datos
+    </button>
+  </div>
+
+</div>

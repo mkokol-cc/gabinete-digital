@@ -1,0 +1,141 @@
+$primary: #0071BC;
+$white: #fff;
+$dark: #333;
+$gray: #6c757d;
+$gray-light: #ddd;
+$gray-bg: #f2f2f2;
+$font-body: Verdana, Geneva, sans-serif;
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face { font-family: "FontAwesome"; src: url("/assets/emav/asset_0052.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+.fa-user:before { content: "\f007"; }
+.fa-id-card:before { content: "\f2c2"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-phone:before { content: "\f095"; }
+.fa-credit-card:before { content: "\f09d"; }
+.fa-map-marker:before { content: "\f041"; }
+.fa-tag:before { content: "\f02b"; }
+.fa-calendar:before { content: "\f073"; }
+.fa-pencil:before { content: "\f040"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-home:before { content: "\f015"; }
+.fa-tint:before { content: "\f043"; }
+.fa-calendar:before { content: "\f073"; }
+.fa-thumbs-up:before { content: "\f164"; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+.mis-datos {
+  font-family: $font-body;
+  color: $dark;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: $white;
+  padding: 24px 28px;
+  border-radius: 14px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+}
+
+.perfil-avatar {
+  width: 64px;
+  height: 64px;
+  background: $primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  .fa { font-size: 28px; color: $white; }
+}
+
+.perfil-titulo {
+  h1 { font-size: 20px; font-weight: 700; margin: 0 0 2px; }
+  p { font-size: 14px; color: $gray; margin: 0; }
+}
+
+.datos-card {
+  background: $white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.datos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dato-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dato-label {
+  font-size: 12px;
+  color: $gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  .fa { font-size: 12px; color: #aaa; }
+}
+
+.dato-valor {
+  font-size: 15px;
+  font-weight: 600;
+  color: $dark;
+}
+
+.datos-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-editar {
+  padding: 10px 24px;
+  background: $primary;
+  color: $white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .fa { font-size: 14px; }
+}
+
+@media (max-width: 767px) {
+  .perfil-header { flex-direction: column; text-align: center; padding: 20px; }
+  .datos-card { padding: 20px; }
+}

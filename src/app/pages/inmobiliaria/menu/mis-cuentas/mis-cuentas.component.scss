@@ -1,0 +1,275 @@
+@font-face { font-family: "FontAwesome"; src: url("/assets/inmobiliaria/asset_0030.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-building:before { content: "\f1ad"; }
+.fa-calendar:before { content: "\f073"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-user:before { content: "\f007"; }
+
+$primary: #533767;
+$primary-hover: #6a4780;
+$white: #fff;
+$dark: #333;
+$gray: #6c757d;
+$gray-bg: #EBEBEB;
+$font-heading: "Montserrat", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+.mis-cuentas {
+  font-family: $font-body;
+  max-width: 960px;
+}
+
+.welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, $primary 0%, #7b5590 100%);
+  padding: 28px 32px;
+  border-radius: 16px;
+  color: $white;
+  margin-bottom: 28px;
+}
+
+.welcome-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  .fa { font-size: 26px; }
+}
+
+.welcome-text {
+  h1 { font-family: $font-heading; font-size: 1.4rem; font-weight: 700; margin: 0; }
+  p { font-size: 0.85rem; opacity: 0.85; margin: 4px 0 0; }
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.resumen-card {
+  background: $white;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+}
+
+.resumen-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  .fa { font-size: 20px; }
+}
+
+.resumen-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.resumen-label {
+  font-size: 0.8rem;
+  color: $gray;
+  margin-bottom: 2px;
+}
+
+.resumen-valor {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $dark;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  h2 {
+    font-family: $font-heading;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $dark;
+    margin: 0;
+  }
+}
+
+.prop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.prop-card {
+  background: $white;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+}
+
+.prop-img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #f5f5f5;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.prop-estado {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(83, 55, 103, 0.9);
+  color: $white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.prop-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prop-tipo {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+.prop-dir {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $dark;
+}
+
+.prop-ub {
+  font-size: 0.78rem;
+  color: $gray;
+}
+
+.prop-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.prop-valor {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $dark;
+}
+
+.prop-ref {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.movimientos-table-wrapper {
+  background: $white;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.movimientos-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $gray;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #f5f2f7;
+    border-bottom: 1px solid #eee;
+  }
+
+  td {
+    padding: 14px 20px;
+    font-size: 0.88rem;
+    color: $dark;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .monto { font-weight: 600; }
+}
+
+.estado-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+
+  &.pagado { background: #e8f8e8; color: #27ae60; }
+  &.cobrado { background: #e8f4fd; color: #2980b9; }
+}
+
+@media (max-width: 768px) {
+  .resumen-grid { grid-template-columns: 1fr; }
+  .prop-grid { grid-template-columns: 1fr; }
+  .welcome-card { padding: 20px; }
+  .welcome-text h1 { font-size: 1.15rem; }
+  .movimientos-table {
+    th, td { padding: 10px 14px; font-size: 0.8rem; }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .prop-grid { grid-template-columns: 1fr; }
+}

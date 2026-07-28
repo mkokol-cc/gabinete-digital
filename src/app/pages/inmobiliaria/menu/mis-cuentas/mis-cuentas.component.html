@@ -1,0 +1,76 @@
+<div class="mis-cuentas">
+
+  <div class="welcome-card">
+    <div class="welcome-avatar">
+      <i class="fa fa-user"></i>
+    </div>
+    <div class="welcome-text">
+      <h1>Bienvenido, {{ welcome.nombre }}</h1>
+      <p>{{ welcome.fecha }}</p>
+    </div>
+  </div>
+
+  <div class="resumen-grid">
+    <div class="resumen-card" *ngFor="let item of resumen">
+      <div class="resumen-icon" [style.background]="item.color + '15'" [style.color]="item.color">
+        <i class="fa" [ngClass]="item.icon"></i>
+      </div>
+      <div class="resumen-info">
+        <span class="resumen-label">{{ item.label }}</span>
+        <span class="resumen-valor">{{ item.valor }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Mis Propiedades</h2>
+    </div>
+
+    <div class="prop-grid">
+      <div class="prop-card" *ngFor="let p of propiedades">
+        <div class="prop-img">
+          <img [src]="p.img" [alt]="p.tipo">
+          <span class="prop-estado">{{ p.estado }}</span>
+        </div>
+        <div class="prop-body">
+          <span class="prop-tipo">{{ p.tipo }}</span>
+          <span class="prop-dir">{{ p.direccion }}</span>
+          <span class="prop-ub">{{ p.ubicacion }}</span>
+          <div class="prop-footer">
+            <span class="prop-valor">{{ p.valor }}</span>
+            <span class="prop-ref">{{ p.codref }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Últimos movimientos</h2>
+    </div>
+
+    <div class="movimientos-table-wrapper">
+      <table class="movimientos-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of movimientos">
+            <td>{{ m.fecha }}</td>
+            <td>{{ m.concepto }}</td>
+            <td class="monto">{{ m.monto }}</td>
+            <td><span class="estado-badge" [ngClass]="m.estado === 'Pagado' ? 'pagado' : 'cobrado'">{{ m.estado }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

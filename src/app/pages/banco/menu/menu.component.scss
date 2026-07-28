@@ -1,101 +1,306 @@
-        :root {
-            --bna-blue: #0066cc;
-            --bna-dark-blue: #004a99;
-        }
-        
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: #f4f7f6;
-        }
-        
-        .navbar-bna {
-            background-color: var(--bna-blue) !important;
-            padding: 0.5rem 0;
-        }
-        
-        .logo-bna {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-        }
-        
-        .nav-link {
-            color: white !important;
-            font-weight: 500;
-            padding: 0.75rem 1rem;
-        }
-        
-        .nav-link:hover {
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        .btn-bna {
-            background-color: #0066cc;
-            color: white;
-            border: none;
-        }
-        
-        .btn-bna:hover {
-            background-color: #0052a3;
-        }
-        
-        .btn-purple {
-            background-color: #6f42c1;
-            color: white;
-        }
-        
-        .currency-box {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            font-size: 0.95rem;
-        }
-        
-        .footer-links {
-            background-color: #f1f1f1;
-        }
-        
-        .section-light {
-            background-color: #e9ecef;
-        }
+$teal: #005F86;
+$teal-dark: #004144;
+$teal-hover: #007894;
+$white: #fff;
+$dark: #1a1a2e;
+$gray: #64748b;
+$gray-light: #e2e8f0;
+$gray-bg: #f0f4f8;
+$font-light: "Expert-Sans-Light", helvetica, arial, clean, sans-serif;
+$font-regular: "Expert-Sans-Regular", helvetica, arial, clean, sans-serif;
+$font-bold: "Expert-Sans-Bold", helvetica, arial, clean, sans-serif;
+$sidebar-width: 250px;
+$header-height: 72px;
+$bottom-nav-height: 64px;
 
-        /* Homebanking Custom Styles */
-        .hb-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: none;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
+@font-face { font-family: "Expert-Sans-Bold"; src: url("/assets/banco/asset_0010.ttf") format("truetype"); }
+@font-face { font-family: "Expert-Sans-Regular"; src: url("/assets/banco/asset_0011.bin") format("woff"); }
+@font-face { font-family: "Expert-Sans-Light"; src: url("/assets/banco/asset_0013.bin") format("woff"); }
 
-        .hb-header {
-            background-color: var(--bna-blue);
-            color: white;
-            padding: 1rem 1.5rem;
-        }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .nav-hb {
-            background: white;
-            .nav-link {
-                color: #555 !important;
-                border-bottom: 3px solid transparent;
-                border-radius: 0;
-                &.active {
-                    color: var(--bna-blue) !important;
-                    border-bottom: 3px solid var(--bna-blue);
-                    font-weight: 700;
-                }
-            }
-        }
+.menu-shell {
+  font-family: $font-regular;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $dark;
+  background: $gray-bg;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-        .mobile-nav-fixed {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1050;
-            background: white;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-            button { color: #666; }
-        }
+a { text-decoration: none; color: inherit; }
+
+.menu-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: $header-height;
+  background: linear-gradient(135deg, $teal, $teal-dark);
+  box-shadow: 0 4px 20px rgba(0, 95, 134, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: $white;
+
+    .logo-img {
+      width: 50px;
+      height: auto;
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: $white;
+      font-family: $font-bold;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .user-greeting {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .btn-toggle {
+    display: none;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 9999px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: $white;
+    font-size: 18px;
+    &:hover { background: rgba(255,255,255,0.25); }
+  }
+}
+
+.menu-body {
+  display: flex;
+  flex: 1;
+  margin-top: $header-height;
+  padding-bottom: 0;
+
+  @media (max-width: 767px) {
+    padding-bottom: $bottom-nav-height;
+  }
+}
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background: $white;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  bottom: 0;
+  z-index: 50;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 767px) {
+    transform: translateX(-100%);
+    z-index: 90;
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.sidebar-nav {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  font-family: $font-regular;
+  transition: all 0.2s;
+
+  .bi {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    color: #999;
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    background: #e8f0fe;
+    color: $teal;
+    .bi { color: $teal; }
+  }
+
+  &.active {
+    background: $teal;
+    color: $white;
+    .bi { color: $white; }
+    &:hover {
+      background: $teal-hover;
+    }
+  }
+
+  &.sidebar-logout {
+    margin-top: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+
+    &:hover {
+      background: #fff0f0;
+      color: #dc3545;
+      .bi { color: #dc3545; }
+    }
+  }
+
+  &.sidebar-ext {
+    .ext-icon {
+      font-size: 12px;
+      width: auto;
+      margin-left: auto;
+      color: #bbb;
+    }
+
+    &:hover .ext-icon {
+      color: $teal;
+    }
+  }
+}
+
+.sidebar-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #aaa;
+
+  .bi { font-size: 18px; color: #ccc; }
+}
+
+.sidebar-overlay {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 80;
+  }
+}
+
+.content-area {
+  flex: 1;
+  margin-left: $sidebar-width;
+  padding: 30px;
+  overflow-y: auto;
+  min-height: calc(100vh - $header-height);
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $bottom-nav-height;
+  background: $teal;
+  z-index: 100;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6px 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.bottom-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.65);
+  font-size: 11px;
+  font-weight: 500;
+  transition: color 0.2s;
+
+  .bi {
+    font-size: 20px;
+  }
+
+  &:hover { color: $white; }
+
+  &.active {
+    color: $white;
+  }
+}
+
+:host ::ng-deep .form-container {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+
+  .form-card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-header {
+    .user-greeting { display: none; }
+    .btn-toggle { display: block; }
+  }
+
+  .content-area {
+    padding: 16px;
+  }
+}

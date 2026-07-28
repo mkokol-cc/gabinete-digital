@@ -1,1 +1,5 @@
-<router-outlet />
+<app-floating-home />
+<router-outlet (deactivate)="onDeactivate()" (activate)="onActivate()" />
+@if (showLoading) {
+  <app-loading-screen [fadeOut]="fadeOut" />
+}

@@ -1,0 +1,38 @@
+<div class="mis-cuentas">
+  <div class="welcome-card">
+    <div class="welcome-text">
+      <h2>Bienvenido, Juan Pérez</h2>
+      <p>Resumen de tus cuentas bancarias</p>
+    </div>
+    <div class="welcome-icon">
+      <i class="bi bi-wallet2"></i>
+    </div>
+  </div>
+
+  <div class="accounts-grid">
+    <div class="account-card" *ngFor="let acc of accounts">
+      <div class="card-head" [style.background]="acc.color">
+        <span class="acc-type">{{ acc.type }}</span>
+        <span class="acc-number">{{ acc.number }}</span>
+      </div>
+      <div class="card-body">
+        <small class="label">Saldo disponible</small>
+        <h3>{{ formatCurrency(acc.balance) }}</h3>
+        <small class="cbu">CBU: {{ acc.cbu }}</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="movements-section">
+    <h3>Últimos movimientos</h3>
+    <div class="movements-table">
+      <div class="mov-row" *ngFor="let mov of movements">
+        <div class="mov-date">{{ mov.date }}</div>
+        <div class="mov-desc">{{ mov.description }}</div>
+        <div class="mov-amount" [class.credit]="mov.type === 'credit'" [class.debit]="mov.type === 'debit'">
+          {{ mov.type === 'credit' ? '+' : '' }}{{ formatCurrency(mov.amount) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

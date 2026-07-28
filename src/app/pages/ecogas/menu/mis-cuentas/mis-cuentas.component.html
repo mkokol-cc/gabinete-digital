@@ -1,0 +1,74 @@
+<div class="mis-cuentas">
+
+  <div class="welcome-card">
+    <div class="welcome-avatar">
+      <i class="bi bi-fire"></i>
+    </div>
+    <div class="welcome-text">
+      <h1>Bienvenido, {{ welcome.nombre }}</h1>
+      <p>{{ welcome.cliente }} — {{ welcome.direccion }}</p>
+    </div>
+  </div>
+
+  <div class="resumen-grid">
+    <div class="resumen-card" *ngFor="let item of resumen">
+      <div class="resumen-icon" [style.background]="item.color + '15'" [style.color]="item.color">
+        <i class="bi" [ngClass]="item.icon"></i>
+      </div>
+      <div class="resumen-info">
+        <span class="resumen-label">{{ item.label }}</span>
+        <span class="resumen-valor">{{ item.valor }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Mis Servicios</h2>
+    </div>
+
+    <div class="servicios-grid">
+      <div class="servicio-card" *ngFor="let s of servicios">
+        <div class="servicio-top">
+          <div class="servicio-icono" style="background: #0049af;">
+            <i class="bi" [ngClass]="s.icono"></i>
+          </div>
+          <span class="servicio-estado" [ngClass]="s.clase">{{ s.estado }}</span>
+        </div>
+        <h3 class="servicio-nombre">{{ s.nombre }}</h3>
+        <div class="servicio-detalle">
+          <span><i class="bi bi-tag"></i> {{ s.numero }}</span>
+          <span><i class="bi bi-credit-card"></i> {{ s.monto }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Últimas facturas</h2>
+    </div>
+
+    <div class="movimientos-table-wrapper">
+      <table class="movimientos-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of movimientos">
+            <td>{{ m.fecha }}</td>
+            <td>{{ m.concepto }}</td>
+            <td class="monto">{{ m.monto }}</td>
+            <td><span class="estado-badge" [ngClass]="m.estado === 'Pagado' ? 'pagado' : 'pendiente'">{{ m.estado }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

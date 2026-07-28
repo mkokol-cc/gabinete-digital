@@ -1,0 +1,75 @@
+<div class="mis-cuentas">
+
+  <div class="welcome-card">
+    <div class="welcome-avatar">
+      <i class="fa fa-user"></i>
+    </div>
+    <div class="welcome-text">
+      <h1>Bienvenido, {{ welcome.nombre }}</h1>
+      <p>{{ welcome.fecha }}</p>
+    </div>
+  </div>
+
+  <div class="resumen-grid">
+    <div class="resumen-card" *ngFor="let item of resumen">
+      <div class="resumen-icon" [style.background]="item.color + '15'" [style.color]="item.color">
+        <i class="fa" [ngClass]="item.icon"></i>
+      </div>
+      <div class="resumen-info">
+        <span class="resumen-label">{{ item.label }}</span>
+        <span class="resumen-valor">{{ item.valor }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Mis Pólizas</h2>
+      <a routerLink="/seguro/menu/alta" class="section-link">Nueva póliza <i class="fa fa-arrow-right"></i></a>
+    </div>
+
+    <div class="polizas-grid">
+      <div class="poliza-card" *ngFor="let p of polizas">
+        <div class="poliza-top">
+          <div class="poliza-icono" [style.background]="'#e20039'">
+            <i class="fa" [ngClass]="p.icono"></i>
+          </div>
+          <span class="poliza-estado" [ngClass]="p.clase">{{ p.estado }}</span>
+        </div>
+        <h3 class="poliza-nombre">{{ p.nombre }}</h3>
+        <div class="poliza-detalle">
+          <span><i class="fa fa-calendar"></i> Vigencia: {{ p.vigencia }}</span>
+          <span><i class="fa fa-credit-card"></i> {{ p.monto }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <h2>Últimos movimientos</h2>
+    </div>
+
+    <div class="movimientos-table-wrapper">
+      <table class="movimientos-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Concepto</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of movimientos">
+            <td>{{ m.fecha }}</td>
+            <td>{{ m.concepto }}</td>
+            <td class="monto">{{ m.monto }}</td>
+            <td><span class="estado-badge pagado">{{ m.estado }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
