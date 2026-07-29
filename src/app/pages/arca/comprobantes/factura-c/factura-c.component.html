@@ -1,5 +1,5 @@
 @if(step==1){
-    <div class="text-center ">
+    <div class="text-center">
         <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
             <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
         </div>
@@ -13,27 +13,27 @@
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
-        <div class="gradient">
-            <div>
+        <div class="gradient py-2">
+            <div class="mt-2">
                 <span class="fw-bold">Fecha del Comprobante</span>
-                <input type="date" name="" id="">
+                <input class="ms-2" type="date" name="" id="">
             </div>
-            <div>
+            <div class="mt-2">
                 <span class="fw-bold">Conceptos a incluír</span>
-                <select name="" id="">
+                <select class="ms-2" name="" id="">
                     <option value="" selected="selected" style="color:#888;" onclick="mostrarOcultar(this.value);">seleccionar...</option>
                     <option value="1">&nbsp;Productos</option>
                     <option value="2">&nbsp;Servicios</option>
                     <option value="3">&nbsp;Productos y Servicios</option>
                 </select>
             </div>
-            <div>
-                <input type="checkbox" name="monedaextranjera" id="monedaextranjera">
+            <div class="mt-2">
+                <input class="me-2" type="checkbox" name="monedaextranjera" id="monedaextranjera">
                 <label class="fw-bold" for="monedaextranjera">Moneda Extranjera</label>
             </div>
-            <div>
-                <span>Período Facturado</span>
-                <hr>
+            <div class="mt-2">
+                <span class="d-block w-50 text-justify" style="justify-self: center;">Período Facturado</span>
+                <hr class="mt-0">
                 <div class="w-100 d-flex justify-content-center">
                     <table>
                         <tr>
@@ -51,18 +51,22 @@
                     </table>
                 </div>
             </div>
-            <div>
+            <div class="mt-2">
                 <span>Actividades Asociadas (Obligatorio según régimen específico (vgr. Remito Electrónico Cárnico, etc.)</span>
-                <hr>
+                <hr class="mt-0">
                 <div class="w-100 d-flex justify-content-center">
                     <table>
                         <tr>
-                            <th>Nro.</th>
-                            <th>Actividad</th>
+                            <th style="font-size: 10px; color: #004276;">Nro.</th>
+                            <th style="font-size: 10px; color: #004276;">Actividad</th>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td><select name="" id=""></select></td>
+                            <td>
+                                <select name="" id="" style="width: 200px;">
+                                    <option value="" selected="selected" style="color:#888;" onclick="mostrarOcultar(this.value);">seleccionar...</option>
+                                </select>
+                            </td>
                         </tr>
                     </table>
                 </div>
@@ -71,9 +75,9 @@
                     <button>+</button>
                 </div>
             </div>
-            <div>
+            <div class="mt-2">
                 <span>Referencia Comercial (opcional)</span>
-                <hr>
+                <hr class="mt-0">
                 <div class="w-100 d-flex justify-content-center">
                     <table>
                         <tr>
@@ -88,7 +92,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center py-4">
             <button (click)="toSelectTipoComprobante()">< Volver</button>
             <button (click)="step=step+1">Continuar ></button>
         </div>
@@ -99,17 +103,17 @@
         <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
             <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
         </div>
-        <div class="gradient mb-4 fw-bold text-color-custom">
+        <div class="gradient mb-2 fw-bold text-color-custom">
             DATOS DE EMISIÓN (PASO 2 DE 4)
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex mb-2 justify-content-center">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
         </div>
-        <div class="gradient">
+        <div class="gradient py-2">
             <div class="d-flex">
                 <span>Condición frente al IVA</span>
                 <select name="" id=""></select>
@@ -195,7 +199,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center py-4">
             <button (click)="step=step-1">< Volver</button>
             <button (click)="step=step+1">Continuar ></button>
         </div>
@@ -206,10 +210,10 @@
         <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
             <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
         </div>
-        <div class="gradient mb-4 fw-bold text-color-custom">
+        <div class="gradient mb-2 fw-bold text-color-custom">
                         DATOS DE EMISIÓN (PASO 3 DE 4)
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex mb-2 justify-content-center">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
@@ -273,7 +277,7 @@
             </div>
             <button>Agregar otro Tributo</button>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center py-4">
             <button (click)="step=step-1">< Volver</button>
             <button (click)="step=step+1">Continuar ></button>
         </div>
@@ -284,10 +288,10 @@
         <div class="bg-primary" style="border-radius: 10px 10px 0px 0px">
             <p class="text-light fw-bold m-0">RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</p>
         </div>
-        <div class="gradient mb-4 fw-bold text-color-custom">
+        <div class="gradient mb-2 fw-bold text-color-custom">
             DATOS DE EMISIÓN (PASO 4 DE 4)
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex mb-2 justify-content-center">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
@@ -362,7 +366,7 @@
             </table>
         </div>
         <hr>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center py-4">
             <button (click)="step=step-1">< Volver</button>
             <button (click)="step=step+1">Confirmar Datos...</button>
         </div>

@@ -9,7 +9,10 @@ button{
 button, p, .text-size-12, *{
     font-size: 12px;
 }
-
+hr{
+    justify-self: center;
+    width: 50%;
+}
 
 .text-color-custom{
     color: #048;
@@ -27,7 +30,7 @@ button, p, .text-size-12, *{
     background: linear-gradient(
         to right,
         white 0%,
-        #66a0e4 50%,  /* tu color */
+        #cde4ff 50%,  /* tu color */
         white 100%
     );
 }
@@ -37,8 +40,8 @@ button, p, .text-size-12, *{
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px; /* grosor del borde */
-  background: linear-gradient(to right, white, #004488, white);
+    height: 1px; /* grosor del borde */
+  background: linear-gradient(to right, white, #2376d4, white);
 }
 .gradient::before {
   top: 0;
