@@ -1,0 +1,87 @@
+<div class="menu-shell">
+
+  <header class="menu-header">
+    <div class="header-inner">
+      <a routerLink="/dgr" class="header-logo">
+        <img src="assets/dgr/asset_0001.svg" alt="Rentas Córdoba" class="logo-img">
+        <span class="logo-text">Rentas Córdoba</span>
+      </a>
+      <div class="header-actions">
+        <span class="user-greeting">Juan Pérez</span>
+        <button class="btn-toggle" (click)="sidebarOpen = !sidebarOpen" aria-label="Menú">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-body">
+
+    <aside class="sidebar" [class.open]="sidebarOpen">
+      <nav class="sidebar-nav">
+        <a routerLink="/dgr/menu/mis-cuentas" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-house-door"></i>
+          <span>Mis Cuentas</span>
+        </a>
+        <a routerLink="/dgr/menu/mis-datos" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-person-vcard"></i>
+          <span>Mis Datos</span>
+        </a>
+        <a routerLink="/dgr/menu/alta-ingresos-brutos" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-shop"></i>
+          <span>Alta Ingresos Brutos</span>
+        </a>
+        <a routerLink="/dgr/menu/alta-inmobiliario" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-building"></i>
+          <span>Alta Impuesto Inmobiliario</span>
+        </a>
+        <a routerLink="/dgr/menu/alta-automotor" routerLinkActive="active" class="sidebar-link">
+          <i class="bi bi-truck-front"></i>
+          <span>Alta Impuesto Automotor</span>
+        </a>
+        <a routerLink="/dgr" class="sidebar-link sidebar-logout">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Cerrar Sesión</span>
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <img src="assets/dgr/asset_0001.svg" alt="Rentas Córdoba" class="sidebar-logo">
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" *ngIf="sidebarOpen" (click)="sidebarOpen = false"></div>
+
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <a routerLink="/dgr/menu/mis-cuentas" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-house-door"></i>
+      <span>Cuentas</span>
+    </a>
+    <a routerLink="/dgr/menu/mis-datos" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-person-vcard"></i>
+      <span>Datos</span>
+    </a>
+    <a routerLink="/dgr/menu/alta-ingresos-brutos" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-shop"></i>
+      <span>IB</span>
+    </a>
+    <a routerLink="/dgr/menu/alta-inmobiliario" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-building"></i>
+      <span>Inmob.</span>
+    </a>
+    <a routerLink="/dgr/menu/alta-automotor" routerLinkActive="active" class="bottom-link">
+      <i class="bi bi-truck-front"></i>
+      <span>Automotor</span>
+    </a>
+    <a routerLink="/dgr" class="bottom-link">
+      <i class="bi bi-box-arrow-right"></i>
+      <span>Salir</span>
+    </a>
+  </nav>
+
+</div>

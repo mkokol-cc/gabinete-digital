@@ -1,0 +1,31 @@
+@use '../../../forms/form-card' as *;
+
+.form-card h2 {
+  color: #002443;
+  border-bottom-color: rgba(0, 69, 130, 0.15);
+}
+
+button[type="submit"],
+.btn-submit {
+  background: linear-gradient(135deg, #002443, #004582);
+
+  &:hover {
+    background: #004582;
+  }
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #0b85c4;
+  box-shadow: 0 0 0 3px rgba(11, 133, 196, 0.15);
+}
+
+.checkbox-group input[type="checkbox"],
+.radio-group input[type="radio"],
+.declaration-check input[type="checkbox"] {
+  accent-color: #0b85c4;
+}
