@@ -1,0 +1,144 @@
+<div id=contenido>
+<div class=jig_titulo_con_subtitulo>RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</div>
+<div class=jig_subtitulo>DATOS DE EMISIÓN (PASO 1 DE 4)</div>
+<div class=jig_paso_proceso><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"/><img src="data:image/gif;base64,R0lGODlhCAAIAOMMALCwsLKysri4uMnJycvLy87OztDQ0N7e3uDg4OPj4+Xl5f///wAAAAAAAAAAAAAAACH+A0pJRwAh+QQBCgAPACwAAAAACAAIAAAEIfC9IcSQD6i1FHhEwnEJIYxjhXJCgaBI8QQHdwSYURlSBAA7"/><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"/><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"/><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"/></div>
+<form name=datosEmisorForm action=genComDatosReceptor.do method=post style=margin-top:0px>
+ <div class=jig_borde>
+ <div class=jig_contenido>
+ <table class=jig_form style=margin-left:auto;margin-right:auto>
+ 
+ <tbody><tr>
+ <th><label for=fc>Fecha del Comprobante</label></th>
+ <td nowrap><input value="29/07/2026" size=10 maxlength=10 name=fechaEmisionComprobante id=fc type=text style=padding-left:10px/><input id=fc_btn value="..." type=button style=text-align:center/></td>
+ </tr>
+ <tr>
+ <th>Conceptos a incluír</th>
+ 
+ <td>
+ <select name=idConcepto id=idconcepto>
+							<option value selected style=color:#888>seleccionar...</option>
+							<option value=1>&nbsp;Productos</option>
+							<option value=2>&nbsp;Servicios</option>
+							<option value=3>&nbsp;Productos y Servicios</option>
+						</select>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td colspan=2 style=border-spacing:0px;padding:0px;margin:0px>
+ <table class=jig_form style=margin-left:70px;padding-top:0px;padding-bottom:0px;border-spacing:0px>
+ <tbody><tr>
+ <th><input type=checkbox name=monedaExtranjera id=monedaextranjera value=on></th>
+ <td><label for=monedaextranjera>Moneda Extranjera</label></td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td colspan=2 style=border-spacing:0px;padding:0px;margin:0px>
+ <table id=cancelacionMonedaExtranjeraCheck class=jig_form style=margin-left:70px;padding-top:0px;padding-bottom:0px;border-spacing:0px;display:none>
+ </table>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td colspan=2>
+ <table class=jig_form id=tablamoneda style=display:none>
+ </table>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td colspan=2 style=text-align:center>
+ <table class=jig_form id=tablaperiodo style=margin-left:80px>
+ <tbody><tr id=tablaperiodo_periodo_tit style=display:none>
+ 
+ </tr>
+ <tr id=tablaperiodo_fch_d style=display:none>
+ 
+ 
+ </tr>
+ <tr id=tablaperiodo_fch_h style=display:none>
+ 
+ 
+ </tr>
+ <tr id=tablaperiodo_vto_pago style=display:none>
+ 
+ 
+ </tr>
+ </table>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td colspan=2>
+ <table class=jig_form id=marcoActividadAsoc style=margin-left:80px>
+ <tbody><tr id=ref_com_tit>
+ <td style=width:400px colspan=2 align=left class=jig_subtitulo_seccion>Actividades Asociadas <span style=color:#679>(Obligatorio según régimen específico (vgr. Remito Electrónico Cárnico, etc.)</span><div class=jig_separador></div></td>
+ </tr>
+ <tr>
+ <td colspan=2 style=padding-left:50px>
+ <table class=jig_form id=tablaActividadAsoc>
+ <tbody>
+ <tr>
+ <td nowrap style=font-size:9px;color:#259 id=titulo_pto_vta_factura>Nro.</td>
+ <td nowrap style=font-size:9px;color:#259 id=titulo_pto_vta_factura>Actividad</td>
+ </tr>
+ <tr>
+ <td nowrap><label for=actiAsociadaId name=actiAsociadaOrdSelec id=actiAsociadaOrdSelec>1 - </label></td>
+ <th style=width:75px>
+ <select name=actiAsociadaId id=actiAsociadaId style=width:275px>
+														<option value selected style=color:#888>seleccionar...</option>
+														
+															<option value=749009>749009 - ACTIVIDADES PROFESIONALES, CIEN...</option>
+														
+													</select>
+ </th>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr> 
+ <tr>
+ <td colspan=2 style=padding-left:290px>
+ <input type=button value=+ style=width:25px;text-align:center;margin-top:-2px/><input type=button value=- style=width:25px;text-align:center;margin-top:-2px/>
+  </td>
+  </tr>
+  
+  <tr>
+  <td colspan=2>
+  <table class=jig_form id=tablaRefCom style=margin-left:80px>
+ <tbody><tr id=ref_com_tit>
+ <td style=width:400px colspan=2 align=left class=jig_subtitulo_seccion>Referencia Comercial <span style=color:#679>(opcional)</span><div class=jig_separador></div></td>
+ </tr>
+ <tr>
+ <th style=width:100px>Referencia #</th>
+ <td><input type=text size=50 maxlength=50 name=refComEmisor id=refComEmisor style=width:200px;padding-left:10px value/></td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2 style=padding-left:200px>
+<input type=button value=+ style=width:25px;text-align:center;margin-top:-2px/><input type=button value=- style=width:25px;text-align:center;margin-top:-2px/>
+  </td>
+  </tr>
+  
+  
+  </table>
+ </div>
+ </div>
+ <br>
+ <input type=button (click)="prev()" value="< Volver"/>&nbsp;<input type=button (click)="next()" value="Continuar >"/>
+ <br><br>
+</form>
+<table style=margin-left:auto;margin-right:auto>
+ <tbody><tr><td><div class=jig_separador_botones></div></tr>
+ <tr><td><input type=button value="Menú Principal"/></tr>
+</table>
+<br>
+ </div>

@@ -13,7 +13,8 @@
     <div id="main" class="cont">
         <form action="">
             @if(tipoComprobante==''){
-                <app-tipo-comprobante (seleccionTipoComprobante)="tipoComprobante=$event"></app-tipo-comprobante>
+                <app-factura-c-2></app-factura-c-2>
+                <!--<app-tipo-comprobante (seleccionTipoComprobante)="tipoComprobante=$event"></app-tipo-comprobante>-->
             }
             @if(tipoComprobante=='a'){
                 <app-factura-c></app-factura-c>
@@ -22,7 +23,8 @@
                 <app-factura-c></app-factura-c>
             }
             @if(tipoComprobante=='c'){
-                <app-factura-c (volverTipoComprobante)="tipoComprobante=''"></app-factura-c>
+                <!--<app-factura-c (volverTipoComprobante)="tipoComprobante=''"></app-factura-c>-->
+                <app-factura-c-2></app-factura-c-2>
             }
         </form>
 	</div>

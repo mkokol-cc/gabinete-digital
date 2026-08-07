@@ -1,0 +1,143 @@
+ <div id=contenido>
+<style class=sf-hidden>#advertencia_impresion{display:none}
+
+</style>
+<div class=jig_titulo_con_subtitulo>RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</div>
+<div class=jig_subtitulo>DATOS DE LA OPERACIÓN (PASO 3 DE 4)</div>
+<div class=jig_paso_proceso><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src="data:image/gif;base64,R0lGODlhCAAIAOMMALCwsLKysri4uMnJycvLy87OztDQ0N7e3uDg4OPj4+Xl5f///wAAAAAAAAAAAAAAACH+A0pJRwAh+QQBCgAPACwAAAAACAAIAAAEIfC9IcSQD6i1FHhEwnEJIYxjhXJCgaBI8QQHdwSYURlSBAA7" /><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-10)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"></div>
+<div id=advertencia_impresion class=sf-hidden></div>
+<form name=datosOperacionForm action=genComResumenDatos.do method=post style=margin-top:0px>
+ 
+ <div class=jig_borde>
+ <div class=jig_contenido id=detalles_datos>
+ 
+ <table class=jig_formvertical id=idoperacion>
+ <tbody><tr>
+ 
+ <th>Código</th>
+ <th>Producto/Servicio</th>
+ 
+ <th>Cant.</th>
+ <th style=padding:0px>U. Medida</th>
+ <th>Prec. Unitario</th>
+ <th>% Bon.</th>
+ <th>Importe Bon.</th>
+ <th style=padding:0px></th>
+ <th style=padding:0px></th>
+ <th style=padding:0px></th>
+ <th>Subtotal</th>
+ <th>Eliminar</th>
+ </tr>
+ <tr><td style=padding:0px><input type=text class=soloTexto name=detalleCodigoArticulo maxlength=4 style=width:50px value><td style=padding:0px><textarea class=soloTexto name=detalleDescripcion id=detalle_descripcion1 style=width:200px;overflow:auto;height:19px rows=1></textarea><td style=padding:0px><input type=text class=soloNumerosConDecimales name=detalleCantidad maxlength=19 id=detalle_cantidad1 value=1><td style=padding:0px><select type=text name=detalleMedida id=detalle_medida1 style=width:95px><option value=7 style=color:#888 selected>seleccionar...<option value=1 style=padding-left:10px> kilogramos<option value=2 style=padding-left:10px> metros<option value=3 style=padding-left:10px> metros cuadrados<option value=4 style=padding-left:10px> metros cúbicos<option value=5 style=padding-left:10px> litros<option value=6 style=padding-left:10px> 1000 kWh<option value=7 style=padding-left:10px> unidades<option value=8 style=padding-left:10px> pares<option value=9 style=padding-left:10px> docenas<option value=10 style=padding-left:10px> quilates<option value=11 style=padding-left:10px> millares<option value=14 style=padding-left:10px> gramos<option value=15 style=padding-left:10px> milimetros<option value=16 style=padding-left:10px> mm cúbicos<option value=17 style=padding-left:10px> kilómetros<option value=18 style=padding-left:10px> hectolitros<option value=20 style=padding-left:10px> centímetros<option value=25 style=padding-left:10px> jgo. pqt. mazo naipes<option value=27 style=padding-left:10px> cm cúbicos<option value=29 style=padding-left:10px> toneladas<option value=30 style=padding-left:10px> dam cúbicos<option value=31 style=padding-left:10px> hm cúbicos<option value=32 style=padding-left:10px> km cúbicos<option value=33 style=padding-left:10px> microgramos<option value=34 style=padding-left:10px> nanogramos<option value=35 style=padding-left:10px> picogramos<option value=41 style=padding-left:10px> miligramos<option value=47 style=padding-left:10px> mililitros<option value=48 style=padding-left:10px> curie<option value=49 style=padding-left:10px> milicurie<option value=50 style=padding-left:10px> microcurie<option value=51 style=padding-left:10px> uiacthor<option value=52 style=padding-left:10px> muiacthor<option value=53 style=padding-left:10px> kg base<option value=54 style=padding-left:10px> gruesa<option value=61 style=padding-left:10px> kg bruto<option value=62 style=padding-left:10px> uiactant<option value=63 style=padding-left:10px> muiactant<option value=64 style=padding-left:10px> uiactig<option value=65 style=padding-left:10px> muiactig<option value=66 style=padding-left:10px> kg activo<option value=67 style=padding-left:10px> gramo activo<option value=68 style=padding-left:10px> gramo base<option value=96 style=padding-left:10px> packs<option value=98 style=padding-left:10px> otras unidades</select><td style=padding:0px><input type=text class=soloNumerosConDecimales name=detallePrecio maxlength=19 id=detalle_precio1 value><td style=padding:0px><input type=text class=soloNumerosConDecimales name=detallePorcentajeBonificacion maxlength=6 id=detalle_porcentaje1 value=0 size=3><td style=padding:0px><input type=text class=soloNumerosConDecimales name=detalleImporteBonificacion maxlength=14 id=detalle_importe_bonificacion1 value><td style=padding:0px><td style=padding:0px><td style=padding:0px><td style=padding:0px><input type=text name=detalleSubtotal2 id=detalle_subtotal21 readonly value><td style=text-align:center;padding:0px><span style=width:100%;text-align:center><input type=button name=Eliminar value=X style=width:31px;text-align:center;color:#FF0000;font-size:10px></span></table>
+ <input type=button value="Agregar línea descripción" style=width:190px>
+ 
+ <br>
+ 
+ <br>
+ 
+ </div>
+ </div>
+ <div class=jig_fin_de_pagina></div>
+ <div class=jig_borde>
+ <div class=jig_contenido id=resumen_datos>
+ <table style=width:100%>
+ <tbody><tr>
+ <td>
+ <table class=jig_formsmall id=impuestos style=padding:0;margin:0;text-align:left>
+ <tbody><tr>
+ <th style=padding:0px></th>
+ <td style=padding:0px>Detalle</td>
+ <td style=padding:0px>Base<br>Imponible</td>
+ <td style=padding:0px;text-align:center>Alícuota<br>%</td>
+ <td style=padding-left:12px>Importe</td>
+ <td style=padding:0px></td>
+ </tr>
+ <tr><td style=text-align:right;width:180px;padding-bottom:3px><select id=impuesto_1><option value=999 selected>Seleccionar...<option value=1>Impuestos Nacionales<option value=2>Impuestos Provinciales<option value=3>Tributos Municipales<option value=4>Impuestos Internos<option value=5>Ingresos Brutos<option value=6>Percepción de IVA<option value=7>Percepción de Ingresos Brutos<option value=8>Percepción por Tributos Municipales<option value=9>Otras Percepciones<option value=13>Percepción de IVA a No Categorizado<option value=99>Otros</select><td style=padding:0px><input type=text class=soloTexto name=impuestoDetalle id=impuesto_detalle1 style=width:100px maxlength=25 value><td style=padding:0px><input type=text class=soloNumerosConDecimales name=impuestoBaseImponible id=impuesto_baseimponible1 style=width:70px value><td style=padding:0px><input type=text class=soloNumerosConDecimales name=impuestoAlicuota id=impuesto_alicuota1 style=width:45px value><td style=padding:0px><span>$</span>&nbsp;<input type=text class=soloNumerosConDecimales name=impuestoMonto id=impuesto_monto1 style=width:70px value><td style=padding:0px><span style=width:100%;text-align:center><input type=button name=Eliminar id=ef value=X style=width:31px;text-align:center;color:#FF0000;font-size:10px></span><tr>
+ <th colspan=4 style=padding:0px><b>Importe Otros Tributos:</b></th>
+ <td nowrap style=padding:0px><span>$</span> <input type=text name=impTotalImpuestos1 id=imptotalimpuestos1 class=jig_readonly readonly style=width:70px;font-weight:bold;text-align:right value>
+ </tr>
+ <tr>
+ <td colspan=2></td>
+ <td colspan=3 align=center><br><input type=button value="Agregar otro Tributo" name=agregarImp style=text-align:center;width:190px></td>
+ <td></td>
+ </tr>
+ 
+ </table>
+ </td>
+ <td style=vertical-align:top;height:100%;float:right>
+ <table class=jig_formsmall style=height:100%>
+ <tbody><tr>
+ <td style=vertical-align:top>
+ <table class=jig_formsmall id=importes style=float:right>
+ 
+ <tbody><tr>
+ <th colspan=2>Subtotal: <td nowrap><span>$</span> <input type=text name=subtotal3 id=subtotal3 class=jig_readonly readonly style=width:80px;text-align:right value></td>
+ </tr>
+ 
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <table class=jig_formsmall style=float:right>
+ <tbody><tr>
+ <th><b>Importe Otros Tributos: </b><td nowrap><span>$</span> <input type=text name=impTotalImpuestos2 id=imptotalimpuestos2 class=jig_readonly readonly style=width:80px;font-weight:bold;text-align:right value></td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td>
+ <table class=jig_formsmall style=float:right>
+ <tbody><tr>
+ <th><b>Importe Total: </b><td nowrap><span>$</span> <input type=text name=impTotal id=imptotal class=jig_readonly readonly style=width:80px;font-weight:bold;text-align:right value></td>
+ </tr>
+ 
+ </table>
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+ </div>
+ </div>
+ <div class=jig_fin_de_pagina></div>
+ 
+ 
+ <div class=jig_borde>
+ <div class=jig_contenido id=otros_datos>
+ <table class=jig_formsmall style=margin-left:auto;margin-right:auto>
+ <tbody><tr>
+ <td style=text-align:right>Precisión Campo Cantidad<td>
+ <select style=width:90px name=numDecimalesCantidad id=numdecimalescantidad>
+							<option value=2 selected>&nbsp;2 decimales</option>
+							<option value=4>&nbsp;4 decimales</option>
+							<option value=6>&nbsp;6 decimales</option>
+						</select>
+ </td>
+ <td style=text-align:right>Campo Precio Unitario<td>
+ <select style=width:90px name=numDecimalesPrecioUnit id=numdecimalespreciounit>
+							<option value=2 selected>&nbsp;2 decimales</option>
+							<option value=4>&nbsp;4 decimales</option>
+							<option value=6>&nbsp;6 decimales</option>
+						</select>
+ </td>
+ <td style=width:100px>&nbsp;</td>
+ </tr>
+ </table>
+ </div>
+ </div>
+ <div class=jig_fin_de_pagina></div>
+ 
+ 
+ <br>
+ <input type=button (click)="prev()" value="< Volver">&nbsp;<input type=button (click)="next()" value="Continuar >">
+ <br><br>
+</form>
+<table style=margin-left:auto;margin-right:auto>
+ <tbody><tr><td><div class=jig_separador_botones></div></tr>
+ <tr><td><input type=button value="Menú Principal"></tr>
+</table>
+<br>
+ </div>

@@ -3,11 +3,12 @@ import { RouterOutlet, Router, NavigationCancel, NavigationError } from '@angula
 import { filter } from 'rxjs';
 import { FloatingHomeComponent } from './shared/floating-home/floating-home.component';
 import { LoadingScreenComponent } from './shared/loading-screen/loading-screen.component';
+import { SimulacionBannerComponent } from './shared/simulacion-banner/simulacion-banner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FloatingHomeComponent, LoadingScreenComponent],
+  imports: [RouterOutlet, FloatingHomeComponent, LoadingScreenComponent, SimulacionBannerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

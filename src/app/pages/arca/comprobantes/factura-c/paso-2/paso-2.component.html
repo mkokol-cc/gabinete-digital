@@ -1,0 +1,218 @@
+ <div id=contenido>
+<div class=jig_titulo_con_subtitulo>RCEL - GENERACIÓN DE COMPROBANTES - FACTURA C</div>
+<div class=jig_subtitulo>DATOS DEL RECEPTOR (PASO 2 DE 4)</div>
+<div class=jig_paso_proceso><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src="data:image/gif;base64,R0lGODlhCAAIAOMMALCwsLKysri4uMnJycvLy87OztDQ0N7e3uDg4OPj4+Xl5f///wAAAAAAAAAAAAAAACH+A0pJRwAh+QQBCgAPACwAAAAACAAIAAAEIfC9IcSQD6i1FHhEwnEJIYxjhXJCgaBI8QQHdwSYURlSBAA7" /><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"><img src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-9)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important"></div>
+<form name=datosReceptorForm action=genComDatosOperacion.do id=formulario method=post style=margin-top:0px>
+ <div class=jig_borde>
+ <div class=jig_contenido>
+ <table class=jig_form style=margin-left:auto;margin-right:auto>
+ 
+ <tbody><tr>
+ <th>Condición frente al IVA</th>
+ <td>
+ <select name=idIVAReceptor id=idivareceptor style=width:250px>
+							<option value selected style=color:#888>seleccionar...</option>
+							
+							<option value=1>&nbsp;IVA Responsable Inscripto</option>
+							
+							<option value=4>&nbsp;IVA Sujeto Exento</option>
+							
+							<option value=5>&nbsp;Consumidor Final</option>
+							
+							<option value=6>&nbsp;Responsable Monotributo</option>
+							
+							<option value=7>&nbsp;Sujeto No Categorizado</option>
+							
+							<option value=8>&nbsp;Proveedor del Exterior</option>
+							
+							<option value=9>&nbsp;Cliente del Exterior</option>
+							
+							<option value=10>&nbsp;IVA Liberado - Ley Nº 19.640</option>
+							
+							<option value=13>&nbsp;Monotributista Social</option>
+							
+							<option value=15>&nbsp;IVA No Alcanzado</option>
+							
+							<option value=16>&nbsp;Monotributista Trabajador Independiente Promovido</option>
+							
+						</select>
+ </td>
+ </tr>
+ <tr>
+ <th>Tipo y Nro. de Documento</th>
+ <td>
+ <div style=position:relative>
+ <div id=cuit_pais style=display:none;position:absolute;width:100px;top:4px;left:260px;font-size:10px>
+ 
+ </div>
+ </div>
+ <select name=idTipoDocReceptor id=idtipodocreceptor style=width:138px>
+						</select>
+ <input name=nroDocReceptor id=nrodocreceptor type=text maxlength=11 size=12 value>
+ <div style=font-size:10px;color:#259;position:relative;overflow:visible;display:none;width:350px id=desc_cuit_pais></div>
+ </td>
+ </tr>
+ 
+ <tr>
+ <th>A. y Nombre o Razón Social</th>
+ <td nowrap><div style=position:relative><input name=razonSocialReceptor id=razonsocialreceptor type=text style=width:350px class=jig_readonly readonly maxlength=90 value><div id=recuperando_razon style=display:none;position:absolute;top:3px;left:230px></div></div></td>
+ </tr>
+ <tr>
+ 
+ <th>Domicilio Comercial</th>
+ 
+ <td>
+ <div style=position:relative><select name=domicilioReceptorCombo id=domicilioreceptorcombo style=width:350px>
+						</select><input name=domicilioReceptor id=domicilioreceptor type=text style=width:350px;display:none maxlength=90 value><div id=recuperando_domicilio style=display:none;position:absolute;top:3px;left:255px></div></div>
+ </td>
+ </tr>
+ 
+ <tr>
+ <th>Email</th>
+ <td><input name=emailReceptor id=email type=text style=width:200px maxlength=50 value></td>
+ </tr>
+ </table>
+ <table class=jig_form style=margin-left:auto;margin-right:auto>
+ <tbody><tr>
+ <td colspan=2 align=left class=jig_subtitulo_seccion id=tituloformadepago>Condiciones de Venta<div class=jig_separador></div></td>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago1 value=1><label for=formadepago1>Contado</label>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePagoTarjeta id=formadepago2 value=69><label for=formadepago2>Tarjeta de Débito</label>
+ <div style=display:none;margin-left:20px id=divtarjetadebito>
+ 
+ 
+ </div>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePagoTarjeta id=formadepago3 value=68><label for=formadepago3>Tarjeta de Crédito</label>
+ <div style=display:none;margin-left:20px id=divtarjetacredito>
+ 
+ 
+ </div>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago4 value=96><label for=formadepago4>Cuenta Corriente</label>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago5 value=97><label for=formadepago5>Cheque</label>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago6 value=91><label for=formadepago6>Transferencia Bancaria</label>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago7 value=99><label for=formadepago7>Otra </label>
+ </th>
+ </tr>
+ <tr>
+ <th colspan=2 style=text-align:left;padding-left:15px>
+ <input type=checkbox name=formaDePago id=formadepago8 value=90><label for=formadepago8>Otros medios de pago electrónico</label>
+ </th>
+ </tr>
+ <tr>
+ <td colspan=2 align=left class=jig_subtitulo_seccion id=titulocompradoresmultiples>Compradores<div class=jig_separador></div></td>
+ </tr>
+ <tr>
+ <td colspan=2 style=text-align:left;padding-left:15px>
+ ¿El comprobante se emite a más de un comprador?<select name=selectCompradoresMultiples id=selectCompradoresMultiples style=margin-left:10px><option value=N selected>No<option value=S>Sí</select>
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2 style=text-align:left;padding-left:15px>
+ <div id=divCompradoresMultiples style=display:none>
+ 
+ 
+ </div>
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2 align=left class=jig_subtitulo_seccion>Comprobantes Asociados<div class=jig_separador></div></td>
+ </tr>
+ 
+ 
+ 
+ 
+ <tr>
+ <td colspan=2 style=padding-left:50px>
+ <table class=jig_form id=tablacmpasoc>
+ <tbody>
+ <tr>
+ <td nowrap style=font-size:9px;color:#259 id=titulo_pto_vta_factura>Tipo de Comprobante</td>
+ <td nowrap style=font-size:9px;color:#259 id=titulo_pto_vta_factura>Pto. Vta.</td>
+ <th style=padding:0px></th>
+ <td nowrap style=font-size:9px;color:#259 id=titulo_nro_factura>Comprobante</td>
+ <td nowrap style=font-size:9px;color:#259><span id=titulo_cuit_emisor style=display:none>CUIT Emisor</span></td>
+ <td nowrap style=font-size:9px;color:#259><span id=titulo_fecha_emision>Fecha Emisión (Opc.)</span></td>
+ </tr>
+ <tr>
+ <th style=width:75px>
+ <select name=cmpAsociadoTipo id=cmp_asoc_tipo style=width:130px>
+								
+								
+										
+										<option value=91 selected>Remito R</option>	
+										
+										
+										
+										
+										
+								
+										</select>
+ </th>
+ <td nowrap><input name=cmpAsociadoPtoVta type=text maxlength=5 style=width:38px value></td>
+ <th style=padding:0px>-</th>
+ <td nowrap><input name=cmpAsociadoNro type=text maxlength=8 style=width:70px value></td>
+ <td nowrap><input name=cmpAsociadoCuitEmisor type=text maxlength=11 style=width:85px;display:none placeholder="CUIT Emisor" title="CUIT Emisor (sólo si es distinto al del comprobante FACTURA C que está cargando)" value></td>
+ <td nowrap><input name=cmpAsociadoFechaEmision type=text maxlength=10 style=width:85px placeholder="DD/MM/AAAA" title="Fecha de Emisión (obligatorio para comprobantes asociados no electrónicos o tipo Remito)" value /></td>
+ </tr>
+ </tbody>
+ </table>
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2 style=padding-left:290px>
+ <input type=button value=+ style=width:25px;text-align:center;margin-top:-2px><input type=button value=- style=width:25px;text-align:center;margin-top:-2px>
+ </td>
+ </tr>
+ <tr>
+ <td colspan=2 align=left class=jig_subtitulo_seccion id=tituloformadepago>Datos Adicionales del Comprobante<div class=jig_separador></div></td>
+ </tr>
+ <tr>
+ <td nowrap style=font-size:11px;color:#136;padding-left:30px id=titulo_valor><a style=cursor:pointer>» Datos a completar únicamente por empresas alcanzadas por algún régimen especial «</a></td>
+ </tr>
+ <tr>
+ <td>
+ <div style=display:none;margin-left:20px id=divdatosadicionales>
+ 
+ </div>
+ </td>
+ </tr>
+ </table>
+ </div>
+ </div>
+ <br>
+ <input type=button (click)="prev()" value="< Volver">&nbsp;<input type=button (click)="next()" value="Continuar >">
+ <br><br>
+ 
+</form>
+<table style=margin-left:auto;margin-right:auto>
+ <tbody><tr><td><div class=jig_separador_botones></div></tr>
+ <tr><td><input type=button value="Menú Principal"></tr>
+</table>
+<br>
+ </div>

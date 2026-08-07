@@ -8,6 +8,13 @@ import { LandingComponent as LandingComponentSeguro} from './pages/seguro/landin
 import { LandingComponent as LandingComponentInmobiliaria} from './pages/inmobiliaria/landing/landing.component';
 import { LandingComponent as LandingComponentBanco} from './pages/banco/landing/landing.component';
 import { LandingComponent as LandingComponentProveedor} from './pages/proveedor/landing/landing.component';
+import { LandingComponent as LandingComponentDgr} from './pages/dgr/landing/landing.component';
+import { MenuComponent as MenuDgrComponent } from './pages/dgr/menu/menu.component';
+import { MisCuentasComponent as MisCuentasDgrComponent } from './pages/dgr/menu/mis-cuentas/mis-cuentas.component';
+import { MisDatosComponent as MisDatosDgrComponent } from './pages/dgr/menu/mis-datos/mis-datos.component';
+import { AltaIngresosBrutosComponent } from './pages/dgr/alta-ingresos-brutos/alta-ingresos-brutos.component';
+import { AltaInmobiliarioComponent } from './pages/dgr/alta-inmobiliario/alta-inmobiliario.component';
+import { AltaAutomotorComponent } from './pages/dgr/alta-automotor/alta-automotor.component';
 import { LoginComponent } from './pages/arca/login/login.component';
 import { ServiciosComponent } from './pages/arca/servicios/servicios.component';
 import { ComprobantesComponent } from './pages/arca/comprobantes/comprobantes.component';
@@ -145,7 +152,17 @@ export const routes: Routes = [
         {path: 'alta-servicios', component: AltaServicioAguaComponent},
     ]},
     //{path: 'emav/alta-servicio-agua', component: AltaServicioAguaComponent},
-    
+
+    {path: 'dgr', component: LandingComponentDgr},
+    {path: 'dgr/menu', component: MenuDgrComponent, children: [
+        {path: '', redirectTo: 'mis-cuentas', pathMatch: 'full'},
+        {path: 'mis-cuentas', component: MisCuentasDgrComponent},
+        {path: 'mis-datos', component: MisDatosDgrComponent},
+        {path: 'alta-ingresos-brutos', component: AltaIngresosBrutosComponent},
+        {path: 'alta-inmobiliario', component: AltaInmobiliarioComponent},
+        {path: 'alta-automotor', component: AltaAutomotorComponent},
+    ]},
+
     {path: '', component: AdminAlumnoComponent, children: [
         {path: '', redirectTo: 'plataformas', pathMatch: 'full'},
         {path: 'plataformas', component: PlataformasComponent},
